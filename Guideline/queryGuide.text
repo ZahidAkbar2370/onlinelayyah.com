@@ -1,0 +1,37 @@
+/////////////// how we paginate //////////
+
+$select = ModelName::paginate(1 or 2 or 3 ......)->get();
+
+return view("form")->with("select", $select);
+
+
+
+
+
+
+/////////////// how we do where condition //////////
+
+$select = ModelName::where("db_tb_attribute", "your value static or dynamic")->get();
+
+example:
+$select = Student::where("name", "zahid")->get(); or
+$select = Student::where("name", $request->name)->get();
+
+multiple where
+$select = Student::where("name", $request->name)->where("status", "1")->get();
+
+return view("form")->with("select", $select);
+
+
+
+
+
+
+
+/////////////// how we count values //////////
+
+$select = ModelName::where("db_tb_attribute", "your value static or dynamic")->get();
+or 
+$select = ModelName::all();
+
+return view("form")->with("select", count($select);

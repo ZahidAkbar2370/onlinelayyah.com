@@ -1,0 +1,37 @@
+//////////////////// First Time Clone Project ///////////////
+
+git clone prjectUrl
+
+go to project open cmd or power shell
+
+composer install
+composer update
+
+create .env file in your project and copy code from .eve.example file and past into .env
+set your database name
+
+php artisan key:gernate
+
+
+
+//////////////////////////// Before Work start //////////////
+
+git checkout main
+
+go to github create new branch
+
+git pull
+
+then go to your createBranch
+
+git checkout YourCreateBranch
+
+now start work
+
+
+
+/////////////////////////// After Work Start ///////////////
+
+git add .
+git commit -m "message about your work who describe your task done"
+git push

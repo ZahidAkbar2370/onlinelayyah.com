@@ -1,0 +1,34 @@
+php artisan make:middleware CheckStatus->(this is your middleware naem)
+
+
+go to App\Http\Middleware folder
+
+open your created middleware and past code or set your own condition
+below is example (write code in handle funcation)
+
+if (!empty(auth()->user()) && auth()->user()->status == 'admin') {
+    return $next($request);
+}
+
+return redirect("/");
+
+
+
+go to App/Http kernel.php file
+
+past theses lines into your routeMiddleware who is exit into kernel.php
+
+'YourCreatedMiddlewareName' => \App\Http\Middleware\YourCreatedMiddlewareName::class,
+
+
+
+go to Route and open web.php write url into middleware
+
+
+	Route::middleware([YourCreatedMiddlewareName::class])->group(function(){
+
+		Route::get("welcome",function(){
+			return view("welcome");
+		});
+
+	});

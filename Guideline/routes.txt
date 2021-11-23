@@ -1,0 +1,23 @@
+for admin
+
+
+admin-add-filename
+admin-view-filenames
+admin-delete-filename
+admin-update-filename
+
+for seller
+
+
+seller-add-filename
+seller-view-filenames
+seller-delete-filename
+seller-update-filename
+
+for buyer
+
+
+buyer-add-filename
+buyer-view-filenames
+buyer-delete-filename
+buyer-update-filename

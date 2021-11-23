@@ -1,0 +1,26 @@
+php artisan make:seeder SeaderName
+
+
+go to database folder and open seaders folder
+
+open your created seader
+
+
+Model::create([]
+	"db_tb_attribute" => "dumy data or value",
+	"db_tb_attribute" => "dumy data or value",
+	"db_tb_attribute" => "dumy data or value",
+	.......
+	.......
+]);
+
+
+go to database folder and open seaders folder
+
+open DatabaseSeeder.php
+
+past into run function
+
+	$this->call([
+    	UserSeeder::class,
+	]);
