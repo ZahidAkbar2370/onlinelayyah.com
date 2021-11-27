@@ -1,6 +1,6 @@
 //////////////////// First Time Clone Project ///////////////
 
-git clone prjectUrl
+git clone prjectUrl (url whatsapp group ma bhja ha)
 
 go to project open cmd or power shell
 
