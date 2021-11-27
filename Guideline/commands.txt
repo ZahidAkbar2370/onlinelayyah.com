@@ -3,9 +3,13 @@
 php artisan make:seeder SeaderName
 
 
+
+
 //////////////////////// How We Run Seeders? ///////////////////////
 
 php artisan db:seed
+
+
 
 
 //////////////////////// How We Create Migration? //////////////////
@@ -13,9 +17,14 @@ php artisan db:seed
 php artisan make:migration create_tableName_table
 
 
+
+
 //////////////////////// How We Migrate Migration? /////////////////
 
 php artisan migrate <= or => php artisan migrate:refresh <= or => php artisan migrate:refresh --seed
+
+
+
 
 //////////////////////// How We Create Model? //////////////////////
 

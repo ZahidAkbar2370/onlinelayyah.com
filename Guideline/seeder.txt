@@ -5,6 +5,7 @@ go to database folder and open seaders folder
 
 open your created seader
 
+///////////////////////////////////////////////////
 
 Model::create([]
 	"db_tb_attribute" => "dumy data or value",
@@ -14,6 +15,17 @@ Model::create([]
 	.......
 ]);
 
+example:
+
+Brand::create([
+	"user_id" => "1",
+	"brand_name" => "local brand",
+	"publication_status" => "1",
+]);
+
+
+hr table ma 3 4 values add krni hay mean jo line 20 sa 24 tk likha ha wo 3 4 dafa likh k hr bar data change hona chaya but jo forigenId ho ge first time 1 second time 2 and thirds time 3 rakhni hay agr ziada data addd kro ge to id b increase hoti jaya ge. koshish kry hr user_id ki 2 2 values ho
+/////////////////////////////////////////////////
 
 go to database folder and open seaders folder
 
@@ -23,4 +35,13 @@ past into run function
 
 	$this->call([
     	UserSeeder::class,
+	]);
+
+
+example:
+
+$this->call([
+    	brandseeder::class,
+    	categoreyseeder::class,
+    	etc
 	]);

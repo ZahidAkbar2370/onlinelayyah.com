@@ -13,11 +13,13 @@ return view("form")->with("select", $select);
 
 $select = ModelName::where("db_tb_attribute", "your value static or dynamic")->get();
 
-example:
+///// example:
+
 $select = Student::where("name", "zahid")->get(); or
 $select = Student::where("name", $request->name)->get();
 
-multiple where
+///// multiple where
+
 $select = Student::where("name", $request->name)->where("status", "1")->get();
 
 return view("form")->with("select", $select);
@@ -31,7 +33,8 @@ return view("form")->with("select", $select);
 /////////////// how we count values //////////
 
 $select = ModelName::where("db_tb_attribute", "your value static or dynamic")->get();
-or 
+
+///// or 
 $select = ModelName::all();
 
 return view("form")->with("select", count($select);

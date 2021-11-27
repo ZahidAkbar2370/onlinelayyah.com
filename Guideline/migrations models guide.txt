@@ -1,0 +1,28 @@
+
+$table->foreignId('user_id');
+$table->longText('description');
+$table->enum('difficulty', ['easy', 'hard']);
+$table->string('status')->default('1');
+$table->string('status')->nullable();
+
+
+
+//////////////////////// Models Guideline /////////////////
+
+Customer
+brand
+SellerPersonalProfile
+SellerBusinessProfile
+
+etc
+
+///// example:
+
+$table = "brands";
+
+$fillable = 
+[
+	"foreignId",
+	"brand_name",
+	"publication_status",
+]; 

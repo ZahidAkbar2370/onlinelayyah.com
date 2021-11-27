@@ -1,4 +1,4 @@
-for admin
+//////////////////// for admin ////////////////////
 
 
 admin-add-filename
@@ -6,7 +6,11 @@ admin-view-filenames
 admin-delete-filename
 admin-update-filename
 
-for seller
+Route::get("admin-add-file", "ControllerName@create");
+Route::get("admin-save-add-file", "ControllerName@store");
+Route::get("admin-view-files", "ControllerName@index");
+
+//////////////////// for seller ////////////////////
 
 
 seller-add-filename
@@ -14,10 +18,19 @@ seller-view-filenames
 seller-delete-filename
 seller-update-filename
 
-for buyer
+Route::get("seller-add-file", "ControllerName@create");
+Route::get("seller-save-add-file", "ControllerName@store");
+Route::get("seller-view-files", "ControllerName@index");
+
+
+//////////////////// for buyer ////////////////////
 
 
 buyer-add-filename
 buyer-view-filenames
 buyer-delete-filename
 buyer-update-filename
+
+Route::get("buyer-add-file", "ControllerName@create");
+Route::get("buyer-save-add-file", "ControllerName@store");
+Route::get("buyer-view-files", "ControllerName@index");

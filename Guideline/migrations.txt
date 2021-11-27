@@ -1,0 +1,142 @@
+brands: 
+id
+user_id
+brand_id (string, required)
+publication_status (enum, nullable, default(1))
+
+//////////////////////////////////////////////////////////////////////////////
+
+categories: 
+id
+user_id
+caregorey_id (string, required)
+publication_status (enum, nullable, default(1))
+
+///////////////////////////////////////////////////////////////////////////////
+
+products:  
+id 
+user_id (foreignId, required)
+brand_id (foreignId, required)
+categorey_id (foreignId, required)
+product_name (string, required)
+sale_price (integer, required)
+quantity (integer, nullable)
+sale_type (string, required)
+discount (integer, nullable, default(0))
+product_image_1 (string, nullable, default(product_image.png))
+product_image_2 (string, nullable)
+product_image_3 (string, nullable)
+product_lable (string, nullable)
+product_description (longText, required)
+
+color (string,nullable)
+size (string,nullable)
+warrenty_staus (string,nullable)
+warrenty_period (string,nullable)
+develivery_status (string,nullable)
+deliverty_type (string,nullable)
+delivery_charges (string,nullable)
+
+publication_status (enum, nullable, default(1))
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+seller_personal_profiles:
+id
+user_id (foreignId, required)
+first_name (string, nullable)
+last_name (string, nullable)
+mobile_no  (string, nullable)
+whatsapp_no  (string, nullable)
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+seller_business_profiles:
+id
+user_id  (foreignId, required)
+shop_name (string, nullable)
+shop_categorey (string, nullable)
+shop_city (string, nullable)
+shop_address (string, nullable)
+shop_contact_no  (string, nullable)
+shop_cover_photo (string, nullable)
+shop_profile_image (string, nullable)
+shop_facebook_account (string, nullable)
+shop_instagram_account (string, nullable)
+shop_youtube_channel (string, nullable)
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+seller_account_details:
+id
+user_id  (foreignId, required)
+account_holder_name  (string, nullable)
+account_type (string, nullable)
+bank_name (string, nullable)
+account_num (string, nullable)
+
+///////////////////////////////////////////////////////////////////////////////
+
+expenses:
+id
+user_id  (foreignId, required)
+title (string, nullable)
+amount (string, nullable)
+description (string, nullable)
+data_of_expense (string, nullable)
+
+///////////////////////////////////////////////////////////////////////////////
+
+customers:
+id
+user_id  (foreignId, required)
+customer_name (string, nullable)
+contact_no (string, nullable)
+address (string, nullable)
+
+///////////////////////////////////////////////////////////////////////////////
+
+loans:
+id
+user_id  (foreignId, required)
+customer_id  (foreignId, required)
+load_type (string, required)
+amount (string, required)
+description (string, nullable)
+bill (string, nullable)
+loan_date (string, required)
+
+///////////////////////////////////////////////////////////////////////////////
+
+contacts:
+id
+user_id  (foreignId, required)
+title (string, required)
+contact_no (string, required)
+optional (string, nullable)
+
+///////////////////////////////////////////////////////////////////////////////
+
+suppliers:
+id
+user_id  (foreignId, required)
+name  (string, required)
+city  (string, required)
+address (string, nullable)
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+purchase_stocks: 
+id
+user_id  (foreignId, required)
+product_id  (foreignId, required)
+supplier_id  (foreignId, nullable)
+quantity  (string, required)
+purchase_price (string, required)
+total_purchase_price (string, required)
+
