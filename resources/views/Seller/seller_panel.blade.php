@@ -25,6 +25,12 @@
                     </li>
 
                     <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{url('seller-view-brands')}}">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Brands</span>
+                         </a>
+                    </li>
+
+                    <li class="sidebar-item">
                         <a class="sidebar-link" href="#">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
                         </a>
@@ -123,7 +129,7 @@
                                 <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
                                 <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Log out</a>
+                                <form action="{{route('logout')}}" method="post">@csrf <button type="submit" style="background: none;border: none">Log out</button></form></a>
                             </div>
                         </li>
                     </ul>
@@ -131,13 +137,13 @@
             </nav>
             
 
-<main class="content">
-<div class="container-fluid py-4">
+<main class="content" style="padding: none !important">
+<div class="container-fluid ">
 
     @yield("content")
 
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container-fluid">
             <div class="row text-muted">
                 <div class="col-6 text-start">
@@ -163,7 +169,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
             <!-- End Footer -->
 </div>
 </main>

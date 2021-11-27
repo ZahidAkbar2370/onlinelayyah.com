@@ -1,4 +1,4 @@
-@extends("welcome")
+@extends("Seller.seller_panel")
 @section("content")
 
 <main class="d-flex w-100">
@@ -10,16 +10,17 @@
                     <div class="d-table-cell align-middle">
 
                         <div class="text-center">
-                            <h1><b>Back to Login</b></h1>
+                            <h1><b>Add Brand</b></h1>
                         </div>
 
                         <div class="card">
                             <div class="card-body">
                                 <div class="m-sm-4">
-                                     <form method="POST" action="{{ route('login') }}">
+                                     <form method="POST" action="#">
                                         @csrf()
+
                                         <div class="mb-3">
-                                            <label class="form-label">Email</label>
+                                            <label class="form-label">Brand Name</label>
                                             <input id="email" class="form-control form-control-lg @error('email') is-invalid @enderror" value="{{ old('email') }}" type="email" name="email" placeholder="Enter your email" required  autocomplete="email" autofocus/>
 
                                             @error('email')
@@ -28,19 +29,9 @@
                                                 </span>
                                             @enderror
                                         </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Password</label>
-                                            <input id="password" class="form-control form-control-lg  @error('password') is-invalid @enderror" type="password" name="password" placeholder="Enter password" required  autocomplete="current-password"/>
-
-                                            @error('password')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                @enderror
-                                        </div>
                                         <div class="text-center mt-3">
                                              <button type="submit" class="btn btn-lg btn-primary">
-                                                {{ __('Login') }}
+                                                {{ __('Save') }}
                                             </button>
                                             <!-- <a href="#" class="btn btn-lg btn-primary">Login</a> -->
                                             <!-- <button type="submit" class="btn btn-lg btn-primary">Sign up</button> -->
