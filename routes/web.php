@@ -31,6 +31,11 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::get("seller-delete-brand/{id}","Seller\BrandController@destroy");
 
 		//Categorey
+		Route::get("seller-add-categorey","Seller\CategoreyController@create");
+		Route::post("seller-save-add-categorey","Seller\CategoreyController@store");
+		Route::get("seller-view-categories","Seller\CategoreyController@index");
+		Route::get("seller-delete-categorey/{id}","Seller\CategoreyController@destroy");
+
 
 	});
 
