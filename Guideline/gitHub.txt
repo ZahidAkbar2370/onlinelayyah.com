@@ -1,5 +1,7 @@
 //////////////////// First Time Clone Project ///////////////
 
+open git bash in htdocs folder
+
 git clone prjectUrl (url whatsapp group ma bhja ha)
 
 go to project open cmd or power shell
@@ -11,6 +13,10 @@ create .env file in your project and copy code from .eve.example file and past i
 set your database name
 
 php artisan key:gernate
+
+php artisan migrate:refresh --seed
+
+localhost/projectName/public/login
 
 
 

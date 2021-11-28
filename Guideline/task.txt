@@ -1,0 +1,7 @@
+1) migration
+
+2) model
+
+3) seeder
+
+4) crud (add, view, edit, update, delete)

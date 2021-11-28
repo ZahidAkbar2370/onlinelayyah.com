@@ -1,4 +1,4 @@
-php artisan make:seeder SeaderName
+php artisan make:seeder SeaderName (like BrandSeeder, CategoreySeeder)
 
 
 go to database folder and open seaders folder

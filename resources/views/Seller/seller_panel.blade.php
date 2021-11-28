@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="theme/css/app.css" rel="stylesheet">
+    <link href="{{asset('theme/css/app.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://demo-basic.adminkit.io/charts-chartjs.html" />
 </head>
@@ -27,6 +27,12 @@
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{url('seller-view-brands')}}">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Brands</span>
+                         </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{url('seller-view-categories')}}">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Categories</span>
                          </a>
                     </li>
 
@@ -175,7 +181,7 @@
 </main>
 </div>
 
-<script rel="stylesheet" src="theme/js/app.js"></script>
+<script rel="stylesheet" src="{{asset('theme/js/app.js')}}"></script>
     
 
 </body>
