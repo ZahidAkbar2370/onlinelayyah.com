@@ -25,6 +25,12 @@
                     </li>
 
                     <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{url('#')}}">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Customers</span>
+                         </a>
+                    </li>
+
+                    <li class="sidebar-item">
                         <a class="sidebar-link" href="{{url('seller-view-brands')}}">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Brands</span>
                          </a>
@@ -39,6 +45,18 @@
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{url('#')}}">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Prodcuts</span>
+                         </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{url('#')}}">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Suppliers</span>
+                         </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{url('#')}}">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Expenses</span>
                          </a>
                     </li>
 
