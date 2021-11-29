@@ -37,10 +37,16 @@
                     </li>
 
                     <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{url('#')}}">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Prodcuts</span>
+                         </a>
+                    </li>
+
+                    <!-- <li class="sidebar-item">
                         <a class="sidebar-link" href="#">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
                         </a>
-                    </li>
+                    </li> -->
 
                 </ul>
             </div>

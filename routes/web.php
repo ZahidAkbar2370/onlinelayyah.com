@@ -10,6 +10,10 @@ Route::get("/",function(){
 	return redirect("login");
 });
 
+Route::get("/test",function(){
+	return view("Seller.Product.add_product");
+});
+
 Route::middleware([CheckPublicationStatus::class])->group(function(){
 
 	Route::middleware([CheckStatusAdmin::class])->group(function(){
@@ -34,6 +38,8 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::get("seller-add-categorey","Seller\CategoreyController@create");
 		Route::post("seller-save-add-categorey","Seller\CategoreyController@store");
 		Route::get("seller-view-categories","Seller\CategoreyController@index");
+		Route::get("seller-edit-categorey/{id}","Seller\CategoreyController@edit");
+		Route::post("seller-update-categorey/{id}","Seller\CategoreyController@update");
 		Route::get("seller-delete-categorey/{id}","Seller\CategoreyController@destroy");
 
 
