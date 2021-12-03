@@ -25,6 +25,7 @@
 							<!-- <th class="d-none d-xl-table-cell">Publication Status</th> -->
 							<th>Contact No</th>
 							<th>Address</th>
+							<th>Action</th>
 						</tr>
 					</thead>
 					
