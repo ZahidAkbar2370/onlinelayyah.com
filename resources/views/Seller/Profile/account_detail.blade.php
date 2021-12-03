@@ -15,15 +15,15 @@
 
                         <div class="card">
                             <div class="card-body">
-                                <a href="#"><button class="btn btn-primary">Personal Profile</button></a>
-                                <a href="#"><button class="btn btn-primary">Business Profile</button></a>
+                                <a href="{{url('seller-personal-profile')}}"><button class="btn btn-primary">Personal Profile</button></a>
+                                <a href="{{url('seller-business-profile')}}"><button class="btn btn-primary">Business Profile</button></a>
                                 <div class="m-sm-4">
-                                     <form method="POST" action="{{URL::to('#')}}">
+                                     <form method="POST" action="{{URL::to('seller-update-account-detail')}}">
                                         @csrf()
 
                                         <div class="mb-3">
                                             <label class="form-label">Account Holder Name</label>
-                                            <input id="account_holder_name" class="form-control form-control-lg @error('account_holder_name') is-invalid @enderror" value="{{ old('account_holder_name') }}" type="text" name="account_holder_name" placeholder="Enter Account Holder Name"  autocomplete="account_holder_name" autofocus/>
+                                            <input id="account_holder_name" class="form-control form-control-lg @error('account_holder_name') is-invalid @enderror" value="{{ $edit_account_detail->account_holder_name }}" type="text" name="account_holder_name" placeholder="Enter Account Holder Name"  autocomplete="account_holder_name" autofocus/>
 
                                             @error('account_holder_name')
                                                 <span class="invalid-feedback" role="alert">
@@ -36,9 +36,9 @@
                                             <label class="form-label">Account Type</label>
                                             <select id="account_type" class="form-control form-control-lg @error('account_type') is-invalid @enderror" name="account_type"  autocomplete="account_type" autofocus>
                                                 <option value="">Select Type</option>
-                                                <option value="jazzcash">Jazzcash</option>
-                                                <option value="easypassa">Easypassa</option>
-                                                <option value="bank_account">Bank Account</option>
+                                                <option value="jazzcash" {{ ( $edit_account_detail->account_type == "jazzcash" ) ? 'selected' : '' }}>Jazzcash</option>
+                                                <option value="easypassa" {{ ( $edit_account_detail->account_type == "easypassa" ) ? 'selected' : '' }}>Easypassa</option>
+                                                <option value="bank_account" {{ ( $edit_account_detail->account_type == "bank_account" ) ? 'selected' : '' }}>Bank Account</option>
                                             </select>
 
                                             @error('account_type')
@@ -47,10 +47,10 @@
                                                 </span>
                                             @enderror
                                         </div>
-
+                                        @if($edit_account_detail->account_type  == "bank_account")
                                         <div class="mb-3">
                                             <label class="form-label">Bank Name</label>
-                                            <input id="bank_name" class="form-control form-control-lg @error('bank_name') is-invalid @enderror" value="{{ old('bank_name') }}" type="text" name="bank_name" placeholder="If Bank then Write Name Here"  autocomplete="bank_name" autofocus/>
+                                            <input id="bank_name" class="form-control form-control-lg @error('bank_name') is-invalid @enderror" value="{{ $edit_account_detail->bank_name }}" type="text" name="bank_name" placeholder="If Bank then Write Name Here"  autocomplete="bank_name" autofocus/>
 
                                             @error('bank_name')
                                                 <span class="invalid-feedback" role="alert">
@@ -58,10 +58,11 @@
                                                 </span>
                                             @enderror
                                         </div>
+                                        @endif
 
                                         <div class="mb-3">
                                             <label class="form-label">Account #</label>
-                                            <input id="account_no" class="form-control form-control-lg @error('account_no') is-invalid @enderror" value="{{ old('account_no') }}" type="number" name="account_no" placeholder="Enter Your Account No"  autocomplete="account_no" autofocus/>
+                                            <input id="account_no" class="form-control form-control-lg @error('account_no') is-invalid @enderror" value="{{ $edit_account_detail->account_no }}" type="number" name="account_no" placeholder="Enter Your Account No"  autocomplete="account_no" autofocus/>
 
                                             @error('account_no')
                                                 <span class="invalid-feedback" role="alert">
