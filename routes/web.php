@@ -26,6 +26,14 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 
 	Route::middleware([CheckStatusSeller::class])->group(function(){
 
+		//Profiles
+		Route::get("seller-personal-profile","Seller\PersonalProfileController@personalProfile");
+		Route::post("seller-update-personal-profile","Seller\PersonalProfileController@updatePersonalProfile");
+		Route::get("seller-business-profile","Seller\BussinessProfileController@bussinessProfile");
+		Route::post("seller-update-business-profile","Seller\BussinessProfileController@updateBussinessProfile");
+		Route::get("seller-account-detail","Seller\AccountDetailController@accountDetail");
+		Route::post("seller-update-account-detail","Seller\AccountDetailController@updateAccountDetail");
+
 		//Brand
 		Route::get("seller-add-brand","Seller\BrandController@create");
 		Route::post("seller-save-add-brand","Seller\BrandController@store");
@@ -50,7 +58,7 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::post("seller-update-customer/{id}","Seller\CustomerController@update");
 		Route::get("seller-delete-customer/{id}","Seller\CustomerController@destroy");
 
-		//Supplier
+  		//Supplier
 		Route::get("seller-add-supplier","Seller\SupplierController@create");
 		Route::post("seller-save-add-supplier","Seller\SupplierController@store");
 		Route::get("seller-view-suppliers","Seller\SupplierController@index")->name('seller-view-suppliers');
@@ -66,9 +74,9 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::post("seller-update-expense/{id}","Seller\ExpenseController@update");
 		Route::get("seller-delete-expense/{id}","Seller\ExpenseController@destroy");
 
-
-
-
+		//Change Password
+		Route::get("seller-change-password","Seller\ChangePasswordController@create");
+		Route::post('/change/password',"Seller\ChangePasswordController@changePassword")->name('profile.change.password');
 	});
 
 	Route::middleware([CheckStatusBuyer::class])->group(function(){
