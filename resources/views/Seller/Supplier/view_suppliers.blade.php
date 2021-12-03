@@ -25,7 +25,7 @@
 							<!-- <th class="d-none d-xl-table-cell">Publication Status</th> -->
 							<th>City</th>
 							<th>Contact No</th>
-							
+							<th>Action</th>
 						</tr>
 					</thead>
 					
