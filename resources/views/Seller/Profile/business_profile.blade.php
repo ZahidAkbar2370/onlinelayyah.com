@@ -15,15 +15,15 @@
 
                         <div class="card">
                             <div class="card-body">
-                                <a href="#"><button class="btn btn-primary">Personal Profile</button></a>
-                                <a href="#"><button class="btn btn-primary">Account Detail</button></a>
+                                <a href="{{url('seller-personal-profile')}}"><button class="btn btn-primary">Personal Profile</button></a>
+                                <a href="{{url('seller-account-detail')}}"><button class="btn btn-primary">Account Detail</button></a>
                                 <div class="m-sm-4">
-                                     <form method="POST" action="{{URL::to('#')}}">
+                                     <form method="POST" action="{{URL::to('seller-update-business-profile')}}">
                                         @csrf()
 
                                         <div class="mb-3">
                                             <label class="form-label">Shop Name</label>
-                                            <input id="shop_name" class="form-control form-control-lg @error('shop_name') is-invalid @enderror" value="{{ old('shop_name') }}" type="text" name="shop_name" placeholder="Enter your First Name"  autocomplete="shop_name" autofocus/>
+                                            <input id="shop_name" class="form-control form-control-lg @error('shop_name') is-invalid @enderror" value="{{ $edit_business_profile->shop_name }}" type="text" name="shop_name" placeholder="Enter your First Name"  autocomplete="shop_name" autofocus/>
 
                                             @error('shop_name')
                                                 <span class="invalid-feedback" role="alert">
@@ -48,33 +48,38 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Profile Image</label>
-                                            <input id="profile_image" class="form-control form-control-lg @error('profile_image') is-invalid @enderror" value="{{ old('profile_image') }}" type="file" name="profile_image" autocomplete="profile_image" autofocus/>
+                                            <input id="profile_image" class="form-control form-control-lg @error('profile_image') is-invalid @enderror" value="{{ $edit_business_profile->profile_image }}" type="file" name="profile_image" autocomplete="profile_image" autofocus/>
 
                                             @error('profile_image')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                             @enderror
+
+                                            @if(!empty($edit_business_profile->profile_image))
+                                                <img src="theme/img/bussinessProfile/profile.jpg" style="width: 120px;height: 120px;margin-top: 5px;">
+                                            @endif
+
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="form-label">Cover Photo</label>
-                                            <input id="cover_photo" class="form-control form-control-lg @error('cover_photo') is-invalid @enderror" value="{{ old('cover_photo') }}" type="file" name="cover_photo"  autocomplete="cover_photo" autofocus/>
+                                            <input id="cover_photo" class="form-control form-control-lg @error('cover_photo') is-invalid @enderror" value="{{ $edit_business_profile->cover_photo }}" type="file" name="cover_photo"  autocomplete="cover_photo" autofocus/>
 
                                             @error('cover_photo')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                             @enderror
+
+                                            @if(!empty($edit_business_profile->cover_photo))
+                                                <img src="theme/img/bussinessCoverPhoto/shop_cover.jpg" style="width: 290px;height: 120px;margin-top: 5px">
+                                            @endif
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="form-label">City</label>
-                                            <select id="city" class="form-control form-control-lg @error('city') is-invalid @enderror" name="city"  autocomplete="city" autofocus>
-                                                <option value="layyah">Layyah</option>
-                                                <option value="jamanshah">Jamanshah</option>
-                                                <option value="kotsultan">Kot Sultan</option>
-                                            </select>
+                                           <input id="city" class="form-control form-control-lg @error('city') is-invalid @enderror" value="{{ $edit_business_profile->city }}" type="text" name="city"  autocomplete="city" autofocus/>
 
                                             @error('city')
                                                 <span class="invalid-feedback" role="alert">
@@ -85,7 +90,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Permanent Address</label>
-                                            <textarea id="address" class="form-control form-control-lg @error('address') is-invalid @enderror" value="{{ old('address') }}" rows="4" name="address" placeholder="Enter Your Mobile No"  autocomplete="address" autofocus></textarea>
+                                            <textarea id="address" class="form-control form-control-lg @error('address') is-invalid @enderror" value="{{ old('address') }}" rows="4" name="address" placeholder="Enter Your Mobile No"  autocomplete="address" autofocus>{{ $edit_business_profile->address }}</textarea>
 
                                             @error('address')
                                                 <span class="invalid-feedback" role="alert">

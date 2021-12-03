@@ -26,6 +26,13 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 
 	Route::middleware([CheckStatusSeller::class])->group(function(){
 
+		Route::get("seller-personal-profile","Seller\PersonalProfileController@personalProfile");
+		Route::post("seller-update-personal-profile","Seller\PersonalProfileController@updatePersonalProfile");
+		Route::get("seller-business-profile","Seller\BussinessProfileController@bussinessProfile");
+		Route::post("seller-update-business-profile","Seller\BussinessProfileController@updateBussinessProfile");
+		Route::get("seller-account-detail","Seller\AccountDetailController@accountDetail");
+		Route::post("seller-update-account-detail","Seller\AccountDetailController@updateAccountDetail");
+
 		//Brand
 		Route::get("seller-add-brand","Seller\BrandController@create");
 		Route::post("seller-save-add-brand","Seller\BrandController@store");
