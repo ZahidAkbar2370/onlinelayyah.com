@@ -11,7 +11,7 @@ Route::get("/",function(){
 });
 
 Route::get("/test",function(){
-	return view("Seller.Product.add_product");
+	return view("App.app_layout");
 });
 
 Route::middleware([CheckPublicationStatus::class])->group(function(){
@@ -29,7 +29,7 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		//Brand
 		Route::get("seller-add-brand","Seller\BrandController@create");
 		Route::post("seller-save-add-brand","Seller\BrandController@store");
-		Route::get("seller-view-brands","Seller\BrandController@index");
+		Route::get("seller-view-brands","Seller\BrandController@index")->name('seller.view.brands');
 		Route::get("seller-edit-brand/{id}","Seller\BrandController@edit");
 		Route::post("seller-update-brand/{id}","Seller\BrandController@update");
 		Route::get("seller-delete-brand/{id}","Seller\BrandController@destroy");

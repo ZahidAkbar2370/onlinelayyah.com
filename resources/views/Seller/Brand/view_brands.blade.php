@@ -3,14 +3,19 @@
 
 <div class="row">
 	<h3 class="text-center mb-3">All Brands</h3>
+	<a href="{{url('seller-add-brand')}}" style="width: 190px"><button class="btn btn-primary" style="width: 190px">Add Brand</button></a>
 		<div class="col-12 col-md-12 col-lg-12 col-xxl-12 d-flex">
 			<div class="card flex-fill">
-
 				<div class="card-header">
-					<a href="{{url('seller-add-brand')}}"><button class="btn btn-primary">Add Brand</button></a>
+					<select id="selectInput" style="width: 180px;height: 30px">
+						<option value="1">Name</option>
+						<option value="2">Publication Status</option>
+					</select>
+						<input type="text" name="myInput" id="myInput" onkeyup="myFunction()"  style="width: 180px;height: 30px">
+
 				</div>
 				
-				<table class="table table-hover my-0">
+				<table class="table table-hover my-0" id="myTable">
 					<thead>
 						<tr>
 							<th>Sr #</th>
@@ -44,5 +49,6 @@
 			</div>
 		</div>
 	</div>
+
 
 @endsection
