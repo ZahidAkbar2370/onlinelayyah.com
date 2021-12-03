@@ -55,7 +55,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{url('#')}}">
+                        <a class="sidebar-link" href="{{url('seller-view-expenses')}}">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Expenses</span>
                          </a>
                     </li>

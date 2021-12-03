@@ -58,6 +58,14 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::post("seller-update-supplier/{id}","Seller\SupplierController@update");
 		Route::get("seller-delete-supplier/{id}","Seller\SupplierController@destroy");
 
+		//Expense
+		Route::get("seller-add-expense","Seller\ExpenseController@create");
+		Route::post("seller-save-add-expense","Seller\ExpenseController@store");
+		Route::get("seller-view-expenses","Seller\ExpenseController@index")->name('seller-view-expenses');
+		Route::get("seller-edit-expense/{id}","Seller\ExpenseController@edit");
+		Route::post("seller-update-expense/{id}","Seller\ExpenseController@update");
+		Route::get("seller-delete-expense/{id}","Seller\ExpenseController@destroy");
+
 
 
 

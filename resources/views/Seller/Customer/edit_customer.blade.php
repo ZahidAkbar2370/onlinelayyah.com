@@ -10,7 +10,7 @@
                     <div class="d-table-cell align-middle">
 
                         <div class="text-center">
-                            <h1><b>Add Customer</b></h1>
+                            <h1><b>Update Customer</b></h1>
                         </div>
 
                         <div class="card">
