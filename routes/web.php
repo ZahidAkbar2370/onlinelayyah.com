@@ -26,6 +26,7 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 
 	Route::middleware([CheckStatusSeller::class])->group(function(){
 
+		//Profiles
 		Route::get("seller-personal-profile","Seller\PersonalProfileController@personalProfile");
 		Route::post("seller-update-personal-profile","Seller\PersonalProfileController@updatePersonalProfile");
 		Route::get("seller-business-profile","Seller\BussinessProfileController@bussinessProfile");
@@ -57,7 +58,9 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::post("seller-update-customer/{id}","Seller\CustomerController@update");
 		Route::get("seller-delete-customer/{id}","Seller\CustomerController@destroy");
 
-
+		//Change Password
+		Route::get("seller-change-password","Seller\ChangePasswordController@create");
+		Route::post('/change/password',"Seller\ChangePasswordController@changePassword")->name('profile.change.password');
 
 
 	});
