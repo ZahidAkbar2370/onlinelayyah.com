@@ -154,7 +154,7 @@
               </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="{{url('seller-personal-profile')}}"><i class="align-middle me-1" data-feather="user"></i>Profiles</a>
-                                <!-- <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a> -->
+                                <a class="dropdown-item" href="{{url('seller-change-password')}}"><i class="align-middle me-1" data-feather="lock"></i> Change Password</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
                                 <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
