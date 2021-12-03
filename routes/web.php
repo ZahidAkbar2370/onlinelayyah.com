@@ -45,10 +45,18 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		//Customer
 		Route::get("seller-add-customer","Seller\CustomerController@create");
 		Route::post("seller-save-add-customer","Seller\CustomerController@store");
-		Route::get("seller-view-customers","Seller\CustomerController@index")->name('seller.view.customer');
+		Route::get("seller-view-customers","Seller\CustomerController@index")->name('seller.view.customers');
 		Route::get("seller-edit-customer/{id}","Seller\CustomerController@edit");
 		Route::post("seller-update-customer/{id}","Seller\CustomerController@update");
 		Route::get("seller-delete-customer/{id}","Seller\CustomerController@destroy");
+
+		//Supplier
+		Route::get("seller-add-supplier","Seller\SupplierController@create");
+		Route::post("seller-save-add-supplier","Seller\SupplierController@store");
+		Route::get("seller-view-suppliers","Seller\SupplierController@index")->name('seller-view-suppliers');
+		Route::get("seller-edit-supplier/{id}","Seller\SupplierController@edit");
+		Route::post("seller-update-supplier/{id}","Seller\SupplierController@update");
+		Route::get("seller-delete-supplier/{id}","Seller\SupplierController@destroy");
 
 
 
