@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             CategoreySeeder::class,
             SellerPersonalProfileSeeder::class,
             SellerBussinessProfileSeeder::class,
-    		SellerAccountDetailSeeder::class,
+    		    SellerAccountDetailSeeder::class,
+            CustomerSeeder::class,
     	]);
     }
 }
