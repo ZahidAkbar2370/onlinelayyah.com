@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             SellerBussinessProfileSeeder::class,
     		    SellerAccountDetailSeeder::class,
             CustomerSeeder::class,
+            CustomerSeeder::class,
+            SupplierSeeder::class,
     	]);
     }
 }

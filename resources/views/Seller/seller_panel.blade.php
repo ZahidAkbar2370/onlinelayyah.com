@@ -49,7 +49,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{url('#')}}">
+                        <a class="sidebar-link" href="{{url('seller-view-suppliers')}}">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Suppliers</span>
                          </a>
                     </li>
