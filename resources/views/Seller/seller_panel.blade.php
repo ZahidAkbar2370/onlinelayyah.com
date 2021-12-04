@@ -26,32 +26,32 @@
 
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{url('seller-view-customers')}}">
-                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Customers</span>
+                            <i class="align-middle" data-feather="users"></i> <span class="align-middle">Customers</span>
                          </a>
                     </li>
 
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{url('seller-view-brands')}}">
-                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Brands</span>
+                            <i class="align-middle" data-feather="layers"></i> <span class="align-middle">Brands</span>
                          </a>
                     </li>
 
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{url('seller-view-categories')}}">
-                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Categories</span>
+                            <i class="align-middle" data-feather="layers"></i> <span class="align-middle">Categories</span>
                          </a>
                     </li>
 
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{url('#')}}">
-                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Prodcuts</span>
+                            <i class="align-middle" data-feather="truck"></i> <span class="align-middle">Prodcuts</span>
                          </a>
                     </li>
 
 
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{url('seller-view-expenses')}}">
-                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Expenses</span>
+                            <i class="align-middle" data-feather="activity"></i> <span class="align-middle">Expenses</span>
                          </a>
                     </li>
 
@@ -62,6 +62,50 @@
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{url('seller-view-suppliers')}}">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Suppliers</span>
+                         </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">
+                            <i class="align-middle" data-feather="shopping-bag"></i> <span class="align-middle">Purchase Stocks</span>
+                         </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">
+                            <i class="align-middle" data-feather="shopping-cart"></i> <span class="align-middle">Sale Stock</span>
+                         </a>
+                    </li>
+
+                    <li class="sidebar-header">
+                        Order
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">
+                            <i class="align-middle" data-feather="trending-up"></i> <span class="align-middle">Sale History</span>
+                         </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">
+                            <i class="align-middle" data-feather="clipboard"></i> <span class="align-middle">Orders</span>
+                         </a>
+                    </li>
+
+                    <li class="sidebar-header">
+                        General
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">
+                            <i class="align-middle" data-feather="mail"></i> <span class="align-middle">Email</span>
+                         </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">
+                            <i class="align-middle" data-feather="message-square"></i> <span class="align-middle">Complain</span>
                          </a>
                     </li>
                     <!-- <li class="sidebar-item">
@@ -163,7 +207,7 @@
                                 <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
                                 <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
                                 <div class="dropdown-divider"></div>
-                                <form action="{{route('logout')}}" method="post">@csrf <button type="submit" style="background: none;border: none">Log out</button></form></a>
+                                <a><form action="{{route('logout')}}" method="post">@csrf <button type="submit" style="background: none;border: none"><i class="align-middle me-1" data-feather="power"></i>Log out</button></form></a>
                             </div>
                         </li>
                     </ul>

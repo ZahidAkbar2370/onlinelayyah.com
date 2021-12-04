@@ -38,8 +38,8 @@
 									<td><span class="badge bg-danger">In-active</span></td>
 								@endif
 								<td>
-									<a href="seller-edit-brand/{{$brand->id}}" class="btn btn-info">Edit</a>
-									<a href="seller-delete-brand/{{$brand->id}}" class="btn btn-danger">Delete</a>
+									<a href="seller-edit-brand/{{$brand->id}}" class="btn btn-info"><i class="align-middle" data-feather="edit"></i> <span class="align-middle"></span></a>
+									<a href="seller-delete-brand/{{$brand->id}}" class="btn btn-danger"><i class="align-middle" data-feather="trash-2"></i> <span class="align-middle"></span></a>
 								</td>
 							</tr>
 						@endforeach

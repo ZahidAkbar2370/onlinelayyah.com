@@ -39,8 +39,8 @@
 								<td>{{$customer->address}}</td>
 
 								<td>
-									<a href="seller-edit-customer/{{$customer->id}}" class="btn btn-info">Edit</a>
-									<a href="seller-delete-customer/{{$customer->id}}" class="btn btn-danger">Delete</a>
+									<a href="seller-edit-customer/{{$customer->id}}" class="btn btn-info"><i class="align-middle" data-feather="edit"></i> <span class="align-middle"></span></a>
+									<a href="seller-delete-customer/{{$customer->id}}" class="btn btn-danger"><i class="align-middle" data-feather="trash-2"></i> <span class="align-middle"></span></a>
 								</td>
 							</tr>
 						@endforeach
