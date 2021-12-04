@@ -109,6 +109,18 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		//Change Password
 		Route::get("seller-change-password","Seller\ChangePasswordController@create");
 		Route::post('/change/password',"Seller\ChangePasswordController@changePassword")->name('profile.change.password');
+
+		//Complain
+		Route::get("seller-add-complain","Seller\ComplainController@create");
+		Route::post("seller-save-add-complain","Seller\ComplainController@store");
+
+		//Loan
+		Route::get("seller-add-loan","Seller\LoanController@create");
+		Route::post("seller-save-add-loan","Seller\LoanController@store");
+		Route::get("seller-view-loans","Seller\LoanController@index");
+
+
+
 	});
 
 	Route::middleware([CheckStatusBuyer::class])->group(function(){
