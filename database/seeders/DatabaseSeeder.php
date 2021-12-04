@@ -24,6 +24,9 @@ class DatabaseSeeder extends Seeder
             SupplierSeeder::class,
             ExpenseSeeder::class,
             PurchaseStockSeeder::class,
+            ComplainSeeder::class,
+            LoanSeeder::class,
+            EmailSeeder::class,
     	]);
     }
 }
