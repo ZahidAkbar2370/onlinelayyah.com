@@ -20,8 +20,15 @@
                                         @csrf()
 
                                         <div class="mb-3">
-                                            <label class="form-label">Supplier ID</label>
-                                            <input id="supplier_id" class="form-control form-control-lg @error('supplier_id') is-invalid @enderror" value="{{ $edit_purchase_stock->supplier_id }}" type="number" name="supplier_id" placeholder="Enter Supplier Id" required  autocomplete="supplier_id" autofocus/>
+                                            <label class="form-label">Supplier Name</label>
+                                            <select id="supplier_id" class="form-control form-control-lg @error('supplier_id') is-invalid @enderror" value="{{ old('supplier_id') }}" name="supplier_id"  autocomplete="supplier_id" autofocus>
+                                                <option value="">Select Supplier</option>
+                                                @if(!empty($all_suppliers))
+                                                    @foreach($all_suppliers as $supplier)
+                                                        <option value="{{ $supplier->id}}" {{ (  $edit_purchase_stock->supplier_id == $supplier->id) ? 'selected' : '' }}>{{ $supplier->name}}</option>
+                                                    @endforeach
+                                                @endif
+                                            </select>
 
                                             @error('supplier_id')
                                                 <span class="invalid-feedback" role="alert">

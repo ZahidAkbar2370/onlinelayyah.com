@@ -20,7 +20,7 @@
                                         @csrf()
 
                                         <div class="mb-3">
-                                            <label class="form-label">Supplier ID</label>
+                                            <label class="form-label">Supplier Name</label>
                                             <select id="supplier_id" class="form-control form-control-lg @error('supplier_id') is-invalid @enderror" value="{{ old('supplier_id') }}" name="supplier_id"  autocomplete="supplier_id" autofocus>
                                                 <option value="">Select Supplier</option>
                                                 @if(!empty($all_suppliers))
