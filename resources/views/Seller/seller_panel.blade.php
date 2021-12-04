@@ -198,7 +198,7 @@
               </a>
 
                             <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                <img src="app/images/profileImage/zahid.jpg" class="avatar img-fluid rounded me-1" alt="Zahid Jakhar" /> <span class="text-dark">{{Auth::user()->name}}</span>
+                <img src="{{asset('app/images/profileImage/zahid.jpg')}}" class="avatar img-fluid rounded me-1" /> <span class="text-dark">{{Auth::user()->name}}</span>
               </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="{{url('seller-personal-profile')}}"><i class="align-middle me-1" data-feather="user"></i>Profiles</a>

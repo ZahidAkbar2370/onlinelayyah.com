@@ -39,7 +39,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Product ID</label>
-                                            <input id="product_id" class="form-control form-control-lg @error('product_id') is-invalid @enderror" value="{{ old('product_id') }}" type="number" name="product_id" placeholder="Enter Supplier Id" required  autocomplete="product_id" autofocus/>
+                                            <input id="product_id" class="form-control form-control-lg @error('product_id') is-invalid @enderror" value="{{ old('product_id') }}" type="number" name="product_id" placeholder="Enter Product Id" required  autocomplete="product_id" autofocus/>
 
                                             @error('product_id')
                                                 <span class="invalid-feedback" role="alert">
@@ -47,6 +47,7 @@
                                                 </span>
                                             @enderror
                                         </div>
+
                                         <div class="mb-3">
                                             <label class="form-label">Quantity</label>
                                             <input id="quantity" class="form-control form-control-lg @error('quantity') is-invalid @enderror" value="{{ old('quantity') }}" type="number" name="quantity" placeholder="Enter Quantity" required  autocomplete="quantity" autofocus/>
