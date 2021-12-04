@@ -29,7 +29,7 @@ class ExpenseController extends Controller
 
         ]);
 
-        return redirect("seller-add-customer");
+        return redirect("seller-add-expense");
     }
 
     public function index()

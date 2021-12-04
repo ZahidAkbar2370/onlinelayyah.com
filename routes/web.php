@@ -14,6 +14,14 @@ Route::get("/test",function(){
 	return view("App.app_layout");
 });
 
+Route::get("/contact",function(){
+	return view("App.Page.contact_form");
+});
+
+Route::get("/index",function(){
+	return view("App.Page.home");
+});
+
 Route::middleware([CheckPublicationStatus::class])->group(function(){
 
 	Route::middleware([CheckStatusAdmin::class])->group(function(){

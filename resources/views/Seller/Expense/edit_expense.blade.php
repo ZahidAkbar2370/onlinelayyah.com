@@ -54,7 +54,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Data of expense</label>
-                                            <input id="data_of_expense" class="form-control form-control-lg @error('data_of_expense') is-invalid @enderror" value="{{$edit_expense->data_of_expense}}" type="text" name="data_of_expense" placeholder="Enter your data of expense" required  autocomplete="data_of expense" autofocus/>
+                                            <input id="data_of_expense" class="form-control form-control-lg @error('data_of_expense') is-invalid @enderror" value="{{$edit_expense->data_of_expense}}" type="date" name="data_of_expense" placeholder="Enter your data of expense" required  autocomplete="data_of expense" autofocus/>
 
                                             @error('data_of_expense')
                                                 <span class="invalid-feedback" role="alert">

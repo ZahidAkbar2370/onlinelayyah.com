@@ -19,7 +19,7 @@ class ExpenseSeeder extends Seeder
             "title" => "Gucci",
             "amount" => "10000",
             "description" => "It is international Brand",
-            "data_of_expense" => "data",
+            "data_of_expense" => "2021-12-04",
 
 
         ]);
@@ -29,7 +29,7 @@ class ExpenseSeeder extends Seeder
             "title" => "Nike",
             "amount" => "20000",
             "description" => "It is international Brand",
-            "data_of_expense" => "data",
+            "data_of_expense" => "2021-12-02",
 
 
         ]);
@@ -39,7 +39,7 @@ class ExpenseSeeder extends Seeder
             "title" => "Lagends perfume",
             "amount" => "5000",
             "description" => "It is international Brand",
-            "data_of_expense" => "data",
+            "data_of_expense" => "2021-12-04",
 
 
         ]);
@@ -49,7 +49,7 @@ class ExpenseSeeder extends Seeder
             "title" => "BMW",
             "amount" => "10000000",
             "description" => "It is international Brand",
-            "data_of_expense" => "data",
+            "data_of_expense" => "2021-12-13",
 
 
         ]);
@@ -59,7 +59,7 @@ class ExpenseSeeder extends Seeder
             "title" => "POMA",
             "amount" => "10000",
             "description" => "It is international Brand",
-            "data_of_expense" => "data",
+            "data_of_expense" => "2021-12-07",
 
 
         ]);

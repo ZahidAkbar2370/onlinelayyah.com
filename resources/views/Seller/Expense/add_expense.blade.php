@@ -43,7 +43,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Description</label>
-                                            <input id="description" class="form-control form-control-lg @error('description') is-invalid @enderror" value="{{ old('description') }}" type="text" name="description" placeholder="Enter your description" required  autocomplete="description" autofocus/>
+                                            <input id="description" class="form-control form-control-lg @error('description') is-invalid @enderror" value="{{ old('description') }}" type="text" name="description" placeholder="Enter your description" autocomplete="description" autofocus/>
 
                                             @error('description')
                                                 <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Data of expense</label>
-                                            <input id="data_of_expense" class="form-control form-control-lg @error('data_of_expense') is-invalid @enderror" value="{{ old('data_of_expense') }}" type="text" name="data_of_expense" placeholder="Enter your data of expense" required  autocomplete="data_of expense" autofocus/>
+                                            <input id="data_of_expense" class="form-control form-control-lg @error('data_of_expense') is-invalid @enderror" value="{{ old('data_of_expense') }}" type="date" name="data_of_expense" placeholder="Enter your data of expense"  autocomplete="data_of expense" autofocus/>
 
                                             @error('data_of_expense')
                                                 <span class="invalid-feedback" role="alert">
