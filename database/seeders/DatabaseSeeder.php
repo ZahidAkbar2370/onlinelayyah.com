@@ -19,11 +19,11 @@ class DatabaseSeeder extends Seeder
             CategoreySeeder::class,
             SellerPersonalProfileSeeder::class,
             SellerBussinessProfileSeeder::class,
-    		    SellerAccountDetailSeeder::class,
-            CustomerSeeder::class,
+    		SellerAccountDetailSeeder::class,
             CustomerSeeder::class,
             SupplierSeeder::class,
             ExpenseSeeder::class,
+            PurchaseStockSeeder::class,
     	]);
     }
 }

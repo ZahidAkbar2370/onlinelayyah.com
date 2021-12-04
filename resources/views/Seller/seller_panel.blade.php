@@ -66,7 +66,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
+                        <a class="sidebar-link" href="{{url('seller-view-purchase-stocks')}}">
                             <i class="align-middle" data-feather="shopping-bag"></i> <span class="align-middle">Purchase Stocks</span>
                          </a>
                     </li>
@@ -255,7 +255,7 @@
 
 <script rel="stylesheet" src="{{asset('theme/js/app.js')}}"></script>
 <script rel="stylesheet" src="{{asset('theme/js/search.js')}}"></script>
-    
+
 
 </body>
 

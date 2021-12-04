@@ -74,6 +74,14 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::post("seller-update-supplier/{id}","Seller\SupplierController@update");
 		Route::get("seller-delete-supplier/{id}","Seller\SupplierController@destroy");
 
+		//Supplier
+		Route::get("seller-add-purchase-stock","Seller\PurchaseStockController@create");
+		Route::post("seller-save-add-purchase-stock","Seller\PurchaseStockController@store");
+		Route::get("seller-view-purchase-stocks","Seller\PurchaseStockController@index");
+		Route::get("seller-edit-purchase-stock/{id}","Seller\PurchaseStockController@edit");
+		Route::post("seller-update-purchase-stock/{id}","Seller\PurchaseStockController@update");
+		Route::get("seller-delete-purchase-stock/{id}","Seller\PurchaseStockController@destroy");
+
 		//Expense
 		Route::get("seller-add-expense","Seller\ExpenseController@create");
 		Route::post("seller-save-add-expense","Seller\ExpenseController@store");
