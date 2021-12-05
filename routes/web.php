@@ -23,19 +23,19 @@ Route::get("/index",function(){
 });
 
 Route::get("/products",function(){
-	return view("App.Page.Product.products");
+	return view("App.Product.products");
 });
 
 Route::get("/product-detail",function(){
-	return view("App.Page.Product.product_detail");
+	return view("App.Product.product_detail");
 });
 
 Route::get("/shops",function(){
-	return view("App.Page.Shop.shops");
+	return view("App.Shop.shops");
 });
 
 Route::get("/shop-profile",function(){
-	return view("App.Page.Shop.shop_profile");
+	return view("App.Shop.shop_profile");
 });
 
 Route::middleware([CheckPublicationStatus::class])->group(function(){

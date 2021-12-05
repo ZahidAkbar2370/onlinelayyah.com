@@ -20,6 +20,8 @@ class ProductController extends Controller
         // dd($categories);
         
         return view("Seller.Product.add_product")
+        ->with("brands", $brands)
+        ->with("categories", $categories)
         ;
     }
 
@@ -29,11 +31,11 @@ class ProductController extends Controller
 
         $insert = Product::create([
             "user_id" => $user_id, 
-            "brand_id" => $request->brand_id,
-            "categorey_id" => $request->categorey_id,
+            "brand_id" => $request->brand_name,
+            "categorey_id" => $request->categorey_name,
             "product_name" => $request->product_name,
             "sale_price" => $request->sale_price,
-            "quantity" => $request->quantity,
+            "quantity" => "0",
             "sale_type" => $request->sale_type,
             "discount" => $request->discount,
             "product_image_1" => $request->product_image_1,
@@ -47,12 +49,12 @@ class ProductController extends Controller
             "warrenty_period" => $request->warrenty_period,
             "develivery" => $request->warrenty,
             "delivery_charges" => $request->delivery_charges,
-            "publication_status" => $request->publication_status,
+            "publication_status" => "1",
 
 
         ]);
 
-        return redirect("seller-add-expense");
+        return redirect("seller-view-products");
     }
 
     public function index()
@@ -67,10 +69,10 @@ class ProductController extends Controller
 
     public function edit($id)
     {
-        $edit_expense = Product::find($id);
+        $edit_product = Product::find($id);
 
-        return view("Seller.Expense.edit_expense")
-        ->with("edit_expense", $edit_expense);
+        return view("Seller.Product.edit_product")
+        ->with("edit_product", $edit_product);
     }
 
     public function update(Request $request, $id)
@@ -85,7 +87,7 @@ class ProductController extends Controller
 
         $update_expense->update();
 
-        return redirect("seller-view-expenses");
+        return redirect("seller-view-products");
     }
 
     public function destroy($id)
