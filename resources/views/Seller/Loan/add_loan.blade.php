@@ -20,19 +20,16 @@
                                         @csrf()
 
                                          <div class="mb-3">
-                                            <label class="form-label">Customer Id</label>
-                                            <input id="customer_id" class="form-control form-control-lg @error('customer_id') is-invalid @enderror" value="{{ old('customer_id') }}" type="text" name="customer_id" placeholder="customer id" required  autocomplete="customer_id" autofocus/>
-
-                                            @error('customer_id')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
+                                            <input id="customer_id" class="form-control form-control-lg @error('customer_id') is-invalid @enderror" value="{{$id}}" type="hidden" name="customer_id" placeholder="customer id"  autocomplete="customer_id" autofocus/>
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="form-label">Loan Type</label>
-                                            <input id="loan_type" class="form-control form-control-lg @error('loan_type') is-invalid @enderror" value="{{ old('loan_type') }}" type="text" name="loan_type" placeholder="loan type" required  autocomplete="loan_type" autofocus/>
+                                            <select  id="loan_type" class="form-control form-control-lg @error('loan_type') is-invalid @enderror" value="{{ old('loan_type') }}"name="loan_type" placeholder="loan type" required  autocomplete="loan_type" autofocus>
+                                                <option value="">Select Type</option>
+                                                <option value="recive">Recive</option>
+                                                <option value="give">Give</option>
+                                            </select>
 
                                             @error('loan_type')
                                                 <span class="invalid-feedback" role="alert">
@@ -60,9 +57,9 @@
                                                 </span>
                                             @enderror
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-3" style="display: none">
                                             <label class="form-label">Bill</label>
-                                            <input id="bill" class="form-control form-control-lg @error('bill') is-invalid @enderror" value="{{ old('bill') }}" type="text" name="bill" placeholder="bill" required  autocomplete="bill" autofocus/>
+                                            <input id="bill" class="form-control form-control-lg @error('bill') is-invalid @enderror" value="none" type="text" name="bill" placeholder="bill"  autocomplete="bill" autofocus/>
 
                                             @error('bill')
                                                 <span class="invalid-feedback" role="alert">
@@ -72,7 +69,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Loan Date</label>
-                                            <input id="loan_date" class="form-control form-control-lg @error('loan_date') is-invalid @enderror" value="{{ old('loan_date') }}" type="text" name="loan_date" placeholder="loan date" required  autocomplete="loan_date" autofocus/>
+                                            <input id="loan_date" class="form-control form-control-lg @error('loan_date') is-invalid @enderror" value="{{ old('loan_date') }}" type="date" name="loan_date" placeholder="loan date" required  autocomplete="loan_date" autofocus/>
 
                                             @error('loan_date')
                                                 <span class="invalid-feedback" role="alert">

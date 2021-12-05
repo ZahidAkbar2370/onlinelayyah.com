@@ -15,6 +15,7 @@ class CreateEmailsTable extends Migration
     {
         Schema::create('emails', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
             $table->foreignId('customer_id');
             $table->string('email');
             $table->string('subject');

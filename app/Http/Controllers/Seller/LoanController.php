@@ -9,9 +9,10 @@ use Auth;
 
 class LoanController extends Controller
 {
-    public function create()
+    public function create($id)
     {
-       return view("Seller.Loan.add_loan");
+       return view("Seller.Loan.add_loan")
+       ->with("id", $id);
     }
 
     public function store(Request $request)
@@ -28,16 +29,27 @@ class LoanController extends Controller
             "loan_date" => $request->loan_date,
         ]);
 
-        return redirect("seller-add-loan");
+        return redirect("seller-view-loans/$request->customer_id");
     }
 
-    public function index()
+    public function index($id)
     {
         $user_id = Auth::user()->id ?? 1;
 
-        $all_loans = Loan::where("user_id", $user_id)->get();
+        $all_loans = Loan::where("user_id", $user_id)->where("customer_id", $id)->get();
 
         return view("Seller.Loan.view_loans")
-        ->with("all_loans", $all_loans);
+        ->with("all_loans", $all_loans)
+        ->with("id", $id);
+    }
+
+    public function destroy($id)
+    {
+        $delete_loan = Loan::find($id);
+        $customer_id = $delete_loan->customer_id;
+
+        $delete_loan->delete();
+
+        return redirect("seller-view-loans/$customer_id");
     }
 }

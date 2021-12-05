@@ -15,6 +15,7 @@ class EmailSeeder extends Seeder
     public function run()
     {
         Email::create([
+            "user_id" => "1",
             "customer_id" => "1",
             "email" => "bia@gmail.com",
             "subject" => "subject line matters",
@@ -22,6 +23,7 @@ class EmailSeeder extends Seeder
         ]);
 
         Email::create([
+            "user_id" => "1",
             "customer_id" => "1",
             "email" => "noor@gmail.com",
             "subject" => "what do i write here?",
@@ -29,6 +31,7 @@ class EmailSeeder extends Seeder
         ]);
 
         Email::create([
+            "user_id" => "1",
             "customer_id" => "2",
             "email" => "zahid@gmail.com",
             "subject" => "eliminate filler words",
@@ -36,6 +39,7 @@ class EmailSeeder extends Seeder
         ]);
 
         Email::create([
+            "user_id" => "2",
             "customer_id" => "2",
             "email" => "shani@gmail.com",
             "subject" => "keep it simple and focused",
@@ -43,6 +47,7 @@ class EmailSeeder extends Seeder
         ]);
 
         Email::create([
+            "user_id" => "2",
             "customer_id" => "1",
             "email" => "hadi@gmail.com",
             "subject" => "subject line matters",

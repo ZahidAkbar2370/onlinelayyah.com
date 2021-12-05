@@ -115,11 +115,15 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::post("seller-save-add-complain","Seller\ComplainController@store");
 
 		//Loan
-		Route::get("seller-add-loan","Seller\LoanController@create");
+		Route::get("seller-add-customer-loan/{id}","Seller\LoanController@create");
 		Route::post("seller-save-add-loan","Seller\LoanController@store");
-		Route::get("seller-view-loans","Seller\LoanController@index");
+		Route::get("seller-view-loans/{id}","Seller\LoanController@index");
+		Route::get("seller-delete-loan/{id}","Seller\LoanController@destroy");
 
-
+		//Loan
+		Route::get("seller-add-email","Seller\EmailController@create");
+		Route::post("seller-save-add-email","Seller\EmailController@store");
+		Route::get("seller-view-emails","Seller\EmailController@index");
 
 	});
 
