@@ -16,14 +16,14 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="m-sm-4">
-                                     <form method="POST" action="{{URL::to('#')}}">
+                                     <form method="POST" action="{{URL::to('seller-save-add-product')}}">
                                         @csrf()
 
                                         <div class="mb-3">
                                             <label class="form-label">Product Name</label>
                                             <input id="product_name" class="form-control form-control-lg @error('product_name') is-invalid @enderror" value="{{ old('product_name') }}" type="text" name="product_name" placeholder="Enter your Product Name" required  autocomplete="product_name" autofocus/>
 
-                                            @error('brand_name')
+                                            @error('product_name')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -36,7 +36,8 @@
                                                 <option value="">Select Brand</option>
                                                 @if(!empty($brands))
                                                 @foreach($brands as $brand)
-                                                    <option value="{{$brand->id}}">{{$brand->brand_name}}</option>
+                                                    <option value="{{$brand->id}}">
+                                                        {{$brand->brand_name}}</option>
                                                 @endforeach
                                                 @endif
                                             </select>

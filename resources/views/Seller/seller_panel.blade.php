@@ -43,7 +43,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{url('#')}}">
+                        <a class="sidebar-link" href="{{url('seller-view-products')}}">
                             <i class="align-middle" data-feather="truck"></i> <span class="align-middle">Prodcuts</span>
                          </a>
                     </li>

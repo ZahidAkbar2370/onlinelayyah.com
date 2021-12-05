@@ -90,7 +90,7 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::post("seller-update-supplier/{id}","Seller\SupplierController@update");
 		Route::get("seller-delete-supplier/{id}","Seller\SupplierController@destroy");
 
-		//Supplier
+		//Purchase Stock
 		Route::get("seller-add-purchase-stock","Seller\PurchaseStockController@create");
 		Route::post("seller-save-add-purchase-stock","Seller\PurchaseStockController@store");
 		Route::get("seller-view-purchase-stocks","Seller\PurchaseStockController@index");
@@ -105,6 +105,14 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::get("seller-edit-expense/{id}","Seller\ExpenseController@edit");
 		Route::post("seller-update-expense/{id}","Seller\ExpenseController@update");
 		Route::get("seller-delete-expense/{id}","Seller\ExpenseController@destroy");
+
+		//Product
+		Route::get("seller-add-product","Seller\ProductController@create");
+		Route::post("seller-save-add-product","Seller\ProductController@store");
+		Route::get("seller-view-products","Seller\ProductController@index")->name('seller-view-products');
+		Route::get("seller-edit-expense/{id}","Seller\ProductController@edit");
+		Route::post("seller-update-expense/{id}","Seller\ProductController@update");
+		Route::get("seller-delete-product/{id}","Seller\ProductController@destroy");
 
 		//Change Password
 		Route::get("seller-change-password","Seller\ChangePasswordController@create");
