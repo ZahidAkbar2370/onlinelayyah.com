@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             ComplainSeeder::class,
             LoanSeeder::class,
             EmailSeeder::class,
+            ProductSeeder::class,
     	]);
     }
 }
