@@ -1,4 +1,4 @@
-@extends('App.Page.Shop.shop_profile_layout')
+@extends('App.Shop.shop_profile_layout')
 @section("content")
 
  <div class="row profile-body">

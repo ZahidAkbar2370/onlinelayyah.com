@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             LoanSeeder::class,
             EmailSeeder::class,
             ProductSeeder::class,
+            BuyerProfileSeeder::class,
     	]);
     }
 }

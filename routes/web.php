@@ -38,6 +38,22 @@ Route::get("/shop-profile",function(){
 	return view("App.Shop.shop_profile");
 });
 
+Route::get("/buyer-register",function(){
+	return view("App.Buyer.buyer_register");
+});
+Route::post("save-buyer-profile","Buyer\BuyerController@register");
+Route::get("buyer-profile","Buyer\BuyerController@profile");
+
+
+Route::get("/cart",function(){
+	return view("App.Buyer.cart");
+});
+
+Route::get("/check-out",function(){
+	return view("App.Buyer.checkout");
+});
+
+
 Route::middleware([CheckPublicationStatus::class])->group(function(){
 
 	Route::middleware([CheckStatusAdmin::class])->group(function(){
