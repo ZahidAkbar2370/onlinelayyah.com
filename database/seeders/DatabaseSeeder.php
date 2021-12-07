@@ -29,6 +29,8 @@ class DatabaseSeeder extends Seeder
             EmailSeeder::class,
             ProductSeeder::class,
             BuyerProfileSeeder::class,
+            CartSeeder::class,
+            SaleStock::class,
     	]);
     }
 }
