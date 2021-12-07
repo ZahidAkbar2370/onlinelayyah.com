@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             BuyerProfileSeeder::class,
             CartSeeder::class,
             SaleStockSeeder::class,
-            InvoiceSSeeder::class,
+            InvoiceSeeder::class,
     	]);
     }
 }
