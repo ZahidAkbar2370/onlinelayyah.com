@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             BuyerProfileSeeder::class,
             CartSeeder::class,
-            SaleStock::class,
+            SaleStockSeeder::class,
     	]);
     }
 }
