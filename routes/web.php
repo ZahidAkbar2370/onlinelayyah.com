@@ -149,6 +149,11 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::post("seller-save-add-email","Seller\EmailController@store");
 		Route::get("seller-view-emails","Seller\EmailController@index");
 
+		//Order
+		Route::get("seller-orders","Seller\OrderController@index");
+		Route::get("seller-order-history","Seller\OrderController@orderHistory");
+		Route::get("seller-delete-order/{id}","Seller\OrderController@deleteOrder");
+
 	});
 
 	Route::middleware([CheckStatusBuyer::class])->group(function(){

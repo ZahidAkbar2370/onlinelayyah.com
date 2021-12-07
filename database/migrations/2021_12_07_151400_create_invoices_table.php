@@ -17,6 +17,10 @@ class CreateInvoicesTable extends Migration
             $table->id();
             $table->foreignId('buyer_id');
             $table->foreignId('seller_id');
+            $table->string('order_items');
+            $table->string('grand_total');
+            $table->enum('sale_type',["online", "on_shop"])->default("on_shop");
+            $table->enum('status',["pending", "confirm", "delivered", "cashed"])->default("pending");
             $table->timestamps();
         });
     }

@@ -23,8 +23,7 @@ class SaleStockSeeder extends Seeder
 	    	"sale_price" => "20",
 	    	"discount" => "30",
 	    	"total_price" => "12",
-	    	"sale_type" => "online",
-	    	"status" => "pending",
+	    	
         ]);
 
         SaleStock::create([
@@ -36,9 +35,8 @@ class SaleStockSeeder extends Seeder
 	    	"sale_price" => "10",
 	    	"discount" => "0",
 	    	"total_price" => "10",
-	    	"sale_type" => "online",
-	    	"status" => "delivered",
-        ]);
+	    	
+	    	]);
 
         SaleStock::create([
         	"buyer_id" => "2",
@@ -49,8 +47,6 @@ class SaleStockSeeder extends Seeder
 	    	"sale_price" => "20",
 	    	"discount" => "20",
 	    	"total_price" => "0",
-	    	"sale_type" => "on_shop",
-	    	"status" => "cashed",
         ]);
 
     }

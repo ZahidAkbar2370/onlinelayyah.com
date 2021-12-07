@@ -20,7 +20,5 @@ class SaleStock extends Model
     	"sale_price",
     	"discount",
     	"total_price",
-    	"sale_type",
-    	"status",
     ];
 }

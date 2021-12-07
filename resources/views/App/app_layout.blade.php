@@ -81,7 +81,7 @@
               <ul class="list-main">
                <!--  <li><i class="ti-location-pin"></i> Store location</li>
                 <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li> -->
-                <li><i class="ti-user"></i> <a href="#">Register</a></li>
+                <li><i class="ti-user"></i> <a href="{{url('buyer-register')}}">Register</a></li>
                 <li><i class="ti-power-off"></i><a href="{{url('login')}}">Login</a></li>
               </ul>
             </div>
@@ -97,7 +97,7 @@
           <div class="col-lg-2 col-md-2 col-12">
             <!-- Logo -->
             <div class="logo">
-              <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+              <a href="{{url('index')}}"><img src="app/images/logo.png" alt="logo"></a>
             </div>
             <!--/ End Logo -->
             <!-- Search Form -->
@@ -138,10 +138,10 @@
                 <a href="#" class="single-icon"><i class="ti-power-off"></i></a>
               </div> -->
               <div class="sinlge-bar">
-                <a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                <a href="{{url('buyer-profile')}}" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
               </div>
               <div class="sinlge-bar shopping">
-                <a href="#" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
+                <a href="{{url('cart')}}" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
               </div>
                <div class="sinlge-bar">
                 <a href="#" class="single-icon"><i class="ti-power-off"></i></a>

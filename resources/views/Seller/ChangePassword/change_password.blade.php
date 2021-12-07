@@ -21,7 +21,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Current Password</label>
-                                            <input id="current_password" class="form-control form-control-lg @error('current_password') is-invalid @enderror" value="{{ old('current_password') }}" type="password" name="current_password" placeholder="Enter your Brand Name" required  autocomplete="current_password" autofocus/>
+                                            <input id="current_password" class="form-control form-control-lg @error('current_password') is-invalid @enderror" value="{{ old('current_password') }}" type="password" name="current_password" placeholder="Enter Current Password" required  autocomplete="current_password" autofocus/>
 
                                             @error('current_password')
                                                 <span class="invalid-feedback" role="alert">
@@ -32,7 +32,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">New Password</label>
-                                            <input id="new_password" class="form-control form-control-lg @error('new_password') is-invalid @enderror" value="{{ old('new_password') }}" type="password" name="new_password" placeholder="Enter your Brand Name" required  autocomplete="new_password" autofocus/>
+                                            <input id="new_password" class="form-control form-control-lg @error('new_password') is-invalid @enderror" value="{{ old('new_password') }}" type="password" name="new_password" placeholder="Enter your New Password" required  autocomplete="new_password" autofocus/>
 
                                             @error('new_password')
                                                 <span class="invalid-feedback" role="alert">
@@ -43,7 +43,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Confirm Password</label>
-                                            <input id="word" name="confirm_password" class="form-control form-control-lg @error('word" name="confirm_password') is-invalid @enderror" value="{{ old('word" name="confirm_password') }}" type="password" name="word" name="confirm_password" placeholder="Enter your Brand Name" required  autocomplete="word" name="confirm_password" autofocus/>
+                                            <input id="word" name="confirm_password" class="form-control form-control-lg @error('word" name="confirm_password') is-invalid @enderror" value="{{ old('word" name="confirm_password') }}" type="password" name="word" name="confirm_password" placeholder="Enter COnfirm Password" required  autocomplete="word" name="confirm_password" autofocus/>
 
                                             @error('word" name="confirm_password')
                                                 <span class="invalid-feedback" role="alert">

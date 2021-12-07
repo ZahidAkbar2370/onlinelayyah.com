@@ -84,15 +84,16 @@
                   <div class="navbar-collapse"> 
                     <div class="nav-inner"> 
                       <ul class="nav main-menu menu navbar-nav">
-                          <li class="active"><a href="#">Home</a></li>
+                          <li class="active"><a href="{{url('index')}}">Home</a></li>
                           <li><a href="{{url('products')}}">Product</a></li>                        
-                          <li><a href="#">Shop<i class="ti-angle-down"></i><span class="new"></span></a>
-                            <ul class="dropdown">
+                          <li><a href="{{url('shops')}}">Shop<i class="ti-angle-down"></i></a>
+                            <!-- <span class="new"></span> -->
+                          <!--   <ul class="dropdown">
                               <li><a href="#">Cart</a></li>
                               <li><a href="#">Checkout</a></li>
-                            </ul>
+                            </ul> -->
                           </li>
-                          <li><a href="#">Pricing</a></li>
+                          <!-- <li><a href="#">Pricing</a></li> -->
                           <!-- <li><a href="#">Pages</a></li>                   -->
                           <!-- <li><a href="#">Blog<i class="ti-angle-down"></i></a>
                             <ul class="dropdown">

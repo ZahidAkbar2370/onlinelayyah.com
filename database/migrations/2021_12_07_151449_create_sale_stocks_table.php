@@ -23,8 +23,6 @@ class CreateSaleStocksTable extends Migration
             $table->string('sale_price')->nullable();
             $table->string('discount')->nullable();
             $table->string('total_price')->nullable();
-            $table->enum('sale_type',["online", "on_shop"])->default("on_shop");
-            $table->enum('status',["pending", "confirm", "delivered", "cashed"])->default("pending");
             $table->timestamps();
         });
     }

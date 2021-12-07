@@ -82,13 +82,13 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
+                        <a class="sidebar-link" href="{{url('seller-order-history')}}">
                             <i class="align-middle" data-feather="trending-up"></i> <span class="align-middle">Sale History</span>
                          </a>
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
+                        <a class="sidebar-link" href="{{url('seller-orders')}}">
                             <i class="align-middle" data-feather="clipboard"></i> <span class="align-middle">Orders</span>
                          </a>
                     </li>
