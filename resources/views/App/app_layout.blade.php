@@ -43,7 +43,6 @@
     <link rel="stylesheet" href="{{asset('app/css/responsive.css')}}">
 
   
-  
 </head>
 <body class="js">
   
@@ -81,8 +80,10 @@
               <ul class="list-main">
                <!--  <li><i class="ti-location-pin"></i> Store location</li>
                 <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li> -->
-                <li><i class="ti-user"></i> <a href="{{url('buyer-register')}}">Register</a></li>
-                <li><i class="ti-power-off"></i><a href="{{url('login')}}">Login</a></li>
+                @if(empty(Auth::user()))
+                  <li><i class="ti-user"></i> <a href="{{url('buyer-register')}}">Register</a></li>
+                  <li><i class="ti-power-off"></i><a href="{{url('login')}}">Login</a></li>
+                @endif
               </ul>
             </div>
             <!-- End Top Right -->
@@ -140,6 +141,7 @@
               <!-- <div class="sinlge-bar">
                 <a href="#" class="single-icon"><i class="ti-power-off"></i></a>
               </div> -->
+              @if(!empty(Auth::user()))
               <div class="sinlge-bar">
                 <a href="{{url('buyer-profile')}}" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
               </div>
@@ -149,6 +151,15 @@
                <div class="sinlge-bar">
                 <a href="#" class="single-icon"><i class="ti-power-off"></i></a>
               </div>
+              @else
+              <div class="sinlge-bar">
+                <a href="{{url('buyer-register')}}" class="single-icon" style="font-size: 13px;font-weight: 400">Join Free</a>
+              </div>
+
+              <div class="sinlge-bar">
+                <a href="{{url('login')}}" class="single-icon" style="font-size: 13px;font-weight: 400">Sign in</a>
+              </div>
+              @endif
             </div>
           </div>
         </div>
@@ -161,10 +172,10 @@
           <div class="row">
 
             <div class="col-lg-3">
-              <div class="all-category">
+              <!-- <div class="all-category">
                 <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
                 
-              </div>
+              </div> -->
             </div>
 
             <div class="col-lg-9 col-12">
@@ -174,7 +185,7 @@
                   <div class="navbar-collapse"> 
                     <div class="nav-inner"> 
                       <ul class="nav main-menu menu navbar-nav">
-                          <li class="active"><a href="{{url('index')}}">Home</a></li>
+                          <li class=""><a href="{{url('index')}}">Home</a></li>
                           <li><a href="{{url('products')}}">Products</a></li>                        
                           <li><a href="{{url('shops')}}">Shops </a>
                             <!-- <i class="ti-angle-down"></i> -->
@@ -192,6 +203,7 @@
                             </ul>
                           </li> -->
                           <li><a href="{{url('contact')}}">Contact Us</a></li>
+                          <li><a href="#">Become a Seller</a></li>
                         </ul>
                     </div>
                   </div>
@@ -221,11 +233,11 @@
                     <div class="modal-body">
                         <div class="row no-gutters">
               <div class="col-lg-6 offset-lg-3 col-12">
-                <h4 style="margin-top:100px;font-size:14px; font-weight:500; color:#F7941D; display:block; margin-bottom:5px;">Eshop Free Lite</h4>
-                <h3 style="font-size:30px;color:#333;">Currently You are using free lite Version of Eshop.<h3>
+                <h4 style="margin-top:100px;font-size:14px; font-weight:500; color:#F7941D; display:block; margin-bottom:5px;">Online Layyah Free Desktop App</h4>
+                <h3 style="font-size:30px;color:#333;">Currently You are using free Web App.<h3>
                 <p style="display:block; margin-top:20px; color:#888; font-size:14px; font-weight:400;">Please, purchase full version of the template to get all pages, features and commercial license</p>
                 <div class="button" style="margin-top:30px;">
-                  <a href="https://wpthemesgrid.com/downloads/eshop-ecommerce-html5-template/" target="_blank" class="btn" style="color:#fff;">Buy Now!</a>
+                  <a href="#" target="_blank" class="btn" style="color:#fff;">Download Now!</a>
                 </div>
               </div>
                         </div>

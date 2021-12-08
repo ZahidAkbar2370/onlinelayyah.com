@@ -7,7 +7,7 @@ use App\Http\Middleware\CheckStatusAdmin;
 use App\Http\Middleware\CheckStatusBuyer;
 
 Route::get("/",function(){
-	return redirect("login");
+	return redirect("index");
 });
 
 Route::get("/test",function(){

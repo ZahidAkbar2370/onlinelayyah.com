@@ -4053,6 +4053,9 @@ Version:1.0
 .shop-blog .shop-single-blog:hover{
 	box-shadow: 0px 10px 10px #0000000a;
 }
+.shop-blog .shop-single-blog{
+	box-shadow: 0px 10px 10px #0000000a;
+}
 .shop-blog .shop-single-blog img{
 	height:100%;
 	width:100%;
@@ -4842,7 +4845,8 @@ Version:1.0
   position: relative;
   background: #333;
   text-align: center;
-  background-color: #F7941D;
+
+  /*background-color: #F7941D;*/
   margin-bottom:100px;
 }
 
