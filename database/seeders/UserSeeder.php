@@ -38,5 +38,21 @@ class UserSeeder extends Seeder
         	"status" => "buyer",
         	"publication_status" => "1",
         ]);
+
+        User::create([
+            "name" => "Test",
+            "email" => "seller1@gmail.com",
+            "password" => Hash::make("seller123"),
+            "status" => "seller",
+            "publication_status" => "1",
+        ]);
+
+        User::create([
+            "name" => "Janu Shop",
+            "email" => "seller2@gmail.com",
+            "password" => Hash::make("seller123"),
+            "status" => "seller",
+            "publication_status" => "1",
+        ]);
     }
 }
