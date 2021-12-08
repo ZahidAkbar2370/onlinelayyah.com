@@ -16,7 +16,7 @@ class CheckStatusBuyer
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!empty(auth()->user()) || auth()->user()->status == 'buyer') {
+        if (!empty(auth()->user()) &&  auth()->user()->status == 'buyer') {
                 return $next($request);
         }
 

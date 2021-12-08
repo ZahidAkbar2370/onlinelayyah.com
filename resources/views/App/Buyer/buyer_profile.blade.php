@@ -54,7 +54,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Father Name</label>
-                                            <input id="father_name" class="form-control form-control-lg @error('father_name') is-invalid @enderror"  value="{{$buyerProfile->father_name}}" type="text" name="father_name" placeholder="Enter your Father Name" required  autocomplete="father_name" autofocus/>
+                                            <input id="father_name" class="form-control form-control-lg @error('father_name') is-invalid @enderror"  value="{{$buyerProfile->father_name ?? ''}}" type="text" name="father_name" placeholder="Enter your Father Name" required  autocomplete="father_name" autofocus/>
 
                                             @error('father_name')
                                                 <span class="invalid-feedback" role="alert">
@@ -78,7 +78,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Mobile No</label>
-                                            <input id="mobile_no" class="form-control form-control-lg @error('mobile_no') is-invalid @enderror" value="{{$buyerProfile->mobile_no}}"  type="text" name="mobile_no" placeholder="Enter Your Mobile #" required  autocomplete="mobile_no" autofocus/>
+                                            <input id="mobile_no" class="form-control form-control-lg @error('mobile_no') is-invalid @enderror" value="{{$buyerProfile->mobile_no ?? ''}}"  type="text" name="mobile_no" placeholder="Enter Your Mobile #" required  autocomplete="mobile_no" autofocus/>
 
                                             @error('mobile_no')
                                                 <span class="invalid-feedback" role="alert">
@@ -89,7 +89,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">City</label>
-                                            <input id="city" class="form-control form-control-lg @error('city') is-invalid @enderror"  type="text" name="city" placeholder="Enter Your City Name"  value="{{$buyerProfile->city}}" required  autocomplete="city" autofocus/>
+                                            <input id="city" class="form-control form-control-lg @error('city') is-invalid @enderror"  type="text" name="city" placeholder="Enter Your City Name"  value="{{$buyerProfile->city ?? ''}}" required  autocomplete="city" autofocus/>
 
                                             @error('city')
                                                 <span class="invalid-feedback" role="alert">
@@ -100,7 +100,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Permanent Address</label>
-                                            <textarea id="address" class="form-control form-control-lg @error('address') is-invalid @enderror" name="address" placeholder="Enter Your Address" required  autocomplete="address" autofocus>{{$buyerProfile->parmanent_address}}</textarea>
+                                            <textarea id="address" class="form-control form-control-lg @error('address') is-invalid @enderror" name="address" placeholder="Enter Your Address" required  autocomplete="address" autofocus>{{$buyerProfile->parmanent_address ?? ''}}</textarea>
 
                                             @error('address')
                                                 <span class="invalid-feedback" role="alert">
@@ -111,7 +111,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Any Main Location?</label>
-                                            <input id="address" class="form-control form-control-lg @error('address') is-invalid @enderror"  value="{{$buyerProfile->city}}"  type="text" name="address" placeholder="Enter Your Address" autocomplete="address" autofocus/>
+                                            <input id="address" class="form-control form-control-lg @error('address') is-invalid @enderror"  value="{{$buyerProfile->city ?? ''}}"  type="text" name="address" placeholder="Enter Your Address" autocomplete="address" autofocus/>
 
                                             @error('address')
                                                 <span class="invalid-feedback" role="alert">

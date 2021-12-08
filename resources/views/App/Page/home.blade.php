@@ -106,17 +106,17 @@
                       <div class="col-xl-3 col-lg-4 col-md-4 col-12 shadow-lg p-3 mb-5 bg-white rounded" style="box-shadow: 0px 15px 15px #0000000a;">
                         <div class=" single-product">
                           <div class="product-img">
-                            <a href="{{url('product-detail')}}">
+                            <a href="{{url('product-detail',$product->productID)}}">
                               <img class="default-img" src="app/images/productThumbnail/{{$product->product_image_1}}" alt="#" style="height: 350px">
                               <span class="new">{{$product->categorey_name}}</span>
                             </a>
 
                             <div class="button-head">
                               <div class="product-action">
-                                <a data-toggle="modal" data-target="#exampleModal" title="Product" href="{{url('product-detail')}}"><i class=" ti-eye"></i><span>View Product</span></a>
+                                <a data-toggle="modal" data-target="#exampleModal" title="Product" href="{{url('product-detail',$product->productID)}}"><i class=" ti-eye"></i><span>View Product</span></a>
                               </div>
                               <div class="product-action-2">
-                                <a title="View Prodcut Detail" href="{{url('product-detail')}}">View Detail</a>
+                                <a title="View Prodcut Detail" href="{{url('product-detail',$product->productID)}}">View Detail</a>
                               </div>
                             </div>
                             <div class="product-content">

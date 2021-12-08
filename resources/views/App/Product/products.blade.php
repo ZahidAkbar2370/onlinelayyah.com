@@ -43,22 +43,22 @@
                       <div class="col-xl-3 col-lg-4 col-md-4 col-12">
                         <div class="single-product">
                           <div class="product-img">
-                            <a href="{{url('product-detail')}}">
+                            <a href="{{url('product-detail',$product->productID)}}">
                               <img class="default-img" src="app/images/productThumbnail/{{$product->product_image_1}}" alt="#" style="height: 350px">
                               <span class="new">{{$product->categorey_name}}</span>
                             </a>
                             <div class="button-head">
                               <div class="product-action">
-                                <a data-toggle="modal" data-target="#exampleModal" title="View Product Detail" href="{{url('product-detail')}}"><i class=" ti-eye"></i><span>Product Detail</span></a>
+                                <a data-toggle="modal" data-target="#exampleModal" title="View Product Detail" href="{{url('product-detail',$product->productID)}}"><i class=" ti-eye"></i><span>Product Detail</span></a>
                               </div>
                               <div class="product-action-2">
-                                <a title="View Product Detail" href="{{url('product-detail')}}">Visit Product</a>
+                                <a title="View Product Detail" href="{{url('product-detail',$product->productID)}}">Visit Product</a>
                               </div>
                               </div>
 							</div>
 							
 							<div class="product-content">
-								<h3><a href="{{url('product-detail')}}">{{$product->product_name}}</a></h3>
+								<h3><a href="{{url('product-detail',$product->productID)}}">{{$product->product_name}}</a></h3>
 								<div class="product-price">
                   <span class="old">Rs {{$product->sale_price}}</span>
 									<span>Rs {{$product->sale_price - $product->discount}}</span>

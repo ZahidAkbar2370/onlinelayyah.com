@@ -28,18 +28,15 @@
 							<div class="row">
 								<div class="col-12">
 									<div class="image">
-										<img src="https://via.placeholder.com/950x460" alt="#">
+										<img src="{{asset('app/images/productThumbnail')}}/{{ $select_product->product_image_1}}" width="950" height="460" alt="#">
 									</div>
 									<div class="blog-detail">
-										<h2 class="blog-title">What are the secrets to start- up success?</h2>
+										<h2 class="blog-title">{{ $select_product->product_name}}</h2>
 										<div class="blog-meta">
-											<span class="author"><a href="#"><i class="fa fa-user"></i>By Admin</a><a href="#"><i class="fa fa-calendar"></i>Dec 24, 2018</a><a href="#"><i class="fa fa-comments"></i>Comment (15)</a></span>
+											<span class="author"><a href="#"><i class="fa fa-user"></i>By {{ $select_product->shop_name}}</a><a href="#"><i class="fa fa-calendar"></i>{{$select_product->updated_at}}</a><a href="#"><i class="fa fa-comments"></i>Comment (15)</a></span>
 										</div>
 										<div class="content">
-											<p>What a crazy time. I have five children in colleghigh school graduates.jpge or pursing post graduate studies  Each of my children attends college far from home, the closest of which is more than 800 miles away. While I miss being with my older children, I know that a college experience can be the source of great growth and experience can be the source of source of great growth and can provide them with even greater in future.</p>
-											<!-- <blockquote> <i class="fa fa-quote-left"></i> Do what you love to do and give it your very best. Whether it's business or baseball, or the theater, or any field. If you don't love what you're doing and you can't give it your best, get out of it. Life is too short. You'll be an old man before you know it. risus. Ut tincidunt, erat eget feugiat eleifend, eros magna dapibus diam.</blockquote>
-											<p>What a crazy time. I have five children in colleghigh school graduates.jpge or pursing post graduate studies  Each of my children attends college far from home, the closest of which is more than 800 miles away. While I miss being with my older children, I know that a college experience can be the source of great growth and experience can be the source of source of great growth and can provide them with even greater in future.</p>
-											<p>What a crazy time. I have five children in colleghigh school graduates.jpge or pursing post graduate studies  Each of my children attends college far from home, the closest of which is more than 800 miles away. While I miss being with my older children, I know that a college experience can be the source of great growth and experience can be the source of source of great growth and can provide them with even greater in future.</p> -->
+											<p>{{$select_product->description}}</p>
 										</div>
 									</div>
 									<!-- <div class="share-social">
@@ -58,10 +55,10 @@
 										</div>
 									</div> -->
 								</div>
-								<div class="col-12">
+								<!-- <div class="col-12">
 									<div class="comments">
 										<h3 class="comment-title">Comments (3)</h3>
-										<!-- Single Comment -->
+										
 										<div class="single-comment">
 											<img src="https://via.placeholder.com/80x80" alt="#">
 											<div class="content">
@@ -72,8 +69,8 @@
 												</div>
 											</div>
 										</div>
-										<!-- End Single Comment -->
-										<!-- Single Comment -->
+										
+
 										<div class="single-comment left">
 											<img src="https://via.placeholder.com/80x80" alt="#">
 											<div class="content">
@@ -84,8 +81,8 @@
 												</div>
 											</div>
 										</div>
-										<!-- End Single Comment -->
-										<!-- Single Comment -->
+										
+
 										<div class="single-comment">
 											<img src="https://via.placeholder.com/80x80" alt="#">
 											<div class="content">
@@ -96,14 +93,14 @@
 												</div>
 											</div>
 										</div>
-										<!-- End Single Comment -->
+
 									</div>									
-								</div>											
+								</div> -->											
 								<div class="col-12">			
 									<div class="reply">
-										<div class="reply-head">
+										<!-- <div class="reply-head">
 											<h2 class="reply-title">Leave a Comment</h2>
-											<!-- Comment Form -->
+
 											<form class="form" action="#">
 												<div class="row">
 													<div class="col-lg-6 col-md-6 col-12">
@@ -131,8 +128,8 @@
 													</div>
 												</div>
 											</form>
-											<!-- End Comment Form -->
-										</div>
+
+										</div> -->
 									</div>			
 								</div>			
 							</div>
@@ -142,95 +139,71 @@
 						<div class="main-sidebar">
 							<!-- Single Widget -->
 							<!-- <div class="single-widget search">
-								<div class="form">
-									<input type="email" placeholder="Search Here...">
-									<a class="button" href="#"><i class="fa fa-search"></i></a>
-								</div>
+								<span>{{$select_product->warrenty}}</span>
+								<span>{{$select_product->warrenty_period}}</span>
 							</div> -->
 							<!--/ End Single Widget -->
 							<!-- Single Widget -->
 							<div class="single-widget category">
 								<h3 class="title">Services</h3>
-								<!-- <ul class="categor-list">
-									<li><a href="#">Men's Apparel</a></li>
-									<li><a href="#">Women's Apparel</a></li>
-									<li><a href="#">Bags Collection</a></li>
+								<ul class="categor-list">
+									<li><a href="#"><b>Warrenty:</b> {{$select_product->warrenty}}</a></li>
+									<li><a href="#"><b>Warrenty Period:</b> {{$select_product->warrenty_period}}</a></li>
+									<!-- <li><a href="#">Bags Collection</a></li>
 									<li><a href="#">Accessories</a></li>
-									<li><a href="#">Sun Glasses</a></li>
-								</ul> -->
+									<li><a href="#">Sun Glasses</a></li> -->
+								</ul>
 							</div>
 							<!--/ End Single Widget -->
 							<!-- Single Widget -->
 							<div class="single-widget recent-post">
 								<h3 class="title">Delivery</h3>
-								<!-- Single Post -->
-								<!-- <div class="single-post">
-									<div class="image">
-										<img src="https://via.placeholder.com/100x100" alt="#">
-									</div>
-									<div class="content">
-										<h5><a href="#">Top 10 Beautyful Women Dress in the world</a></h5>
-										<ul class="comment">
-											<li><i class="fa fa-calendar" aria-hidden="true"></i>Jan 11, 2020</li>
-											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>35</li>
-										</ul>
-									</div>
-								</div> -->
-								<!-- End Single Post -->
-								<!-- Single Post -->
-								<!-- <div class="single-post">
-									<div class="image">
-										<img src="https://via.placeholder.com/100x100" alt="#">
-									</div>
-									<div class="content">
-										<h5><a href="#">Top 10 Beautyful Women Dress in the world</a></h5>
-										<ul class="comment">
-											<li><i class="fa fa-calendar" aria-hidden="true"></i>Mar 05, 2019</li>
-											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>59</li>
-										</ul>
-									</div>
-								</div> -->
-								<!-- End Single Post -->
-								<!-- Single Post -->
-								<!-- <div class="single-post">
-									<div class="image">
-										<img src="https://via.placeholder.com/100x100" alt="#">
-									</div>
-									<div class="content">
-										<h5><a href="#">Top 10 Beautyful Women Dress in the world</a></h5>
-										<ul class="comment">
-											<li><i class="fa fa-calendar" aria-hidden="true"></i>June 09, 2019</li>
-											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>44</li>
-										</ul>
-									</div>
-								</div> -->
+								<ul class="categor-list">
+									<li><a href="#"><b>Delivery:</b> {{$select_product->develivery}}</a></li>
+									<li><a href="#"><b>Delivery Charges:</b> {{$select_product->delivery_charges}}</a></li>
+									<!-- <li><a href="#">Bags Collection</a></li>
+									<li><a href="#">Accessories</a></li>
+									<li><a href="#">Sun Glasses</a></li> -->
+								</ul>
 								<!-- End Single Post -->
 							</div>
-							<!--/ End Single Widget -->
-							<!-- Single Widget -->
-							<!--/ End Single Widget -->
-							<!-- Single Widget -->
-							<!-- <div class="single-widget side-tags">
-								<h3 class="title">Tags</h3>
-								<ul class="tag">
-									<li><a href="#">business</a></li>
-									<li><a href="#">wordpress</a></li>
-									<li><a href="#">html</a></li>
-									<li><a href="#">multipurpose</a></li>
-									<li><a href="#">education</a></li>
-									<li><a href="#">template</a></li>
-									<li><a href="#">Ecommerce</a></li>
+
+							<div class="single-widget recent-post">
+								<h3 class="title">Other</h3>
+								<ul class="categor-list">
+									<li><a href="#"><b>Color:</b> {{$select_product->color}}</a></li>
+									<li><a href="#"><b>Size:</b> {{$select_product->size}}</a></li>
+									<li><a href="#"><b>Price:</b> {{$select_product->sale_price}}</a></li>
+									<li><a href="#"><b>Discount:</b> {{$select_product->discount ?? 0}}</a></li>
+									<li><a href="#"><b>Lable:</b> {{$select_product->lable}}</a></li>
+									<li><a href="#"><b>Brand:</b> {{$select_product->brand_name}}</a></li>
+									<li><a href="#"><b>Categorey:</b> {{$select_product->categorey_name}}</a></li>
+									<!-- <li><a href="#">Bags Collection</a></li>
+									<li><a href="#">Accessories</a></li>
+									<li><a href="#">Sun Glasses</a></li> -->
 								</ul>
-							</div> -->
-							<!--/ End Single Widget -->
+								<!-- End Single Post -->
+							</div>
 							<!-- Single Widget -->
 							<div class="single-widget newsletter">
-								<h3 class="title">Newslatter</h3>
+								<h3 class="title">Add TO Cart</h3>
 								<div class="letter-inner">
-									<h4>Subscribe & get news <br> latest updates.</h4>
+									<h4>Enter Your Quantity<br> least 1.</h4>
 									<div class="form-inner">
-										<input type="email" placeholder="Enter your email">
-										<a href="#">Submit</a>
+										<form method="POST" action="{{URL::to('buyer-add-to-cart')}}">
+											@csrf
+											<input type="hidden" name="seller_id" value="{{ $select_product->SellerID}}">
+											<input type="hidden" name="product_id" value="{{ $select_product->productID}}">
+											<input type="hidden" name="discount" value="{{ $select_product->discount}}">
+											<input type="hidden" name="price" value="{{ $select_product->sale_price}}">
+											@if(!empty(Auth::user()) && Auth::user()->status == "buyer")
+											<input type="number" name="quantity" placeholder="Enter Quantity" required="true" min="1">
+											<a><input type="submit" style="background-color: #F7941D" name=""></a>
+											@else
+												<input type="number" placeholder="Enter Quantity" required="true" min="1">
+												<a><input type="submit"  data-toggle="modal" data-target="#product_detail" style="background-color: #F7941D" name=""></a>
+											@endif
+										</form>
 									</div>
 								</div>
 							</div>
@@ -240,6 +213,26 @@
 				</div>
 			</div>
 		</section>
-
+<div class="modal fade" id="product_detail" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close" aria-hidden="true"></span></button>
+                    </div>
+                  </div>
+                    <div class="modal-body"  style="background-color: white">
+                        <div class="row no-gutters">
+              <div class="col-lg-6 offset-lg-3 col-12">
+                <h2 style="margin-top:100px;font-size:14px; font-weight:500; color:#F7941D; display:block; margin-bottom:5px;">Thanks YOu</h2>
+                <h3 style="font-size:30px;color:#333;">Please Login YOur Account Then You can Purchase Product.<h3>
+                <p style="display:block; margin-top:20px; color:#888; font-size:14px; font-weight:400;margin-bottom: 90px;"></p>
+                <!-- <div class="button" style="margin-top:30px;">
+                  <a href="#" target="_blank" class="btn" style="color:#fff;">Download Now!</a>
+                </div> -->
+              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 @endsection

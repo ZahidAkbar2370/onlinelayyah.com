@@ -203,7 +203,7 @@
                             </ul>
                           </li> -->
                           <li><a href="{{url('contact')}}">Contact Us</a></li>
-                          <li><a href="#">Become a Seller</a></li>
+                          <li><a href="#"  data-toggle="modal" data-target="#exampleModal">Become a Seller</a></li>
                         </ul>
                     </div>
                   </div>
@@ -220,6 +220,27 @@
     <!--/ End Header Inner -->
   </header>
   
+   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close" aria-hidden="true"></span></button>
+                    </div>
+                  </div>
+                    <div class="modal-body"  style="background-color: white">
+                        <div class="row no-gutters">
+              <div class="col-lg-6 offset-lg-3 col-12">
+                <h2 style="margin-top:100px;font-size:14px; font-weight:500; color:#F7941D; display:block; margin-bottom:5px;">Welcome TO Online Layyah</h2>
+                <h3 style="font-size:30px;color:#333;">if you want to register your Business on Online Layyah then, <h3>
+                <p style="display:block; margin-top:20px; color:#888; font-size:14px; font-weight:400;margin-bottom: 90px;">Please, contact on whatsapp: +923081312527</p>
+                <!-- <div class="button" style="margin-top:30px;">
+                  <a href="#" target="_blank" class="btn" style="color:#fff;">Download Now!</a>
+                </div> -->
+              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
   
 @yield("content")
   
