@@ -18,21 +18,23 @@ Route::get("/contact",function(){
 	return view("App.Page.contact_form");
 });
 
-Route::get("/index",function(){
-	return view("App.Page.home");
-});
-
-Route::get("/products",function(){
-	return view("App.Product.products");
-});
+// Route::get("/index",function(){
+// 	return view("App.Page.home");
+// });
+Route::get("index","Buyer\HomeController@products");
+// Route::get("/products",function(){
+// 	return view("App.Product.products");
+// });
+Route::get("products","Buyer\ProdcutController@index");
 
 Route::get("/product-detail",function(){
 	return view("App.Product.product_detail");
 });
 
-Route::get("/shops",function(){
-	return view("App.Shop.shops");
-});
+// Route::get("/shops",function(){
+// 	return view("App.Shop.shops");
+// });
+Route::get("shops","Buyer\ShopController@shops");
 
 Route::get("/shop-profile",function(){
 	return view("App.Shop.shop_profile");

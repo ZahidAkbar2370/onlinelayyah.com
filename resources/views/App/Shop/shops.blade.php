@@ -8,7 +8,7 @@
 					<div class="bread-inner">
 						<ul class="bread-list">
 							<li><a href="{{url('index')}}">Home<i class="ti-arrow-right"></i></a></li>
-							<li class="active"><a href="{{url('products')}}">Products</a></li>
+							<li class="active"><a href="{{url('shops')}}">Shops</a></li>
 						</ul>
 					</div>
 				</div>
@@ -21,18 +21,20 @@
     <div class="container-fluid">
       <div class="row">
         <!-- Single Banner  -->
-        @for($i = 0; $i<20 ; $i++)
+        @if($all_shops)
+        @foreach($all_shops as $shop)
         <div class="col-lg-4 col-md-6 col-12 mb-3">
           <div class="single-banner">
-            <img src="https://via.placeholder.com/600x370" alt="#">
+            <img src="app/images/shopCover/{{$shop->cover_photo}}" style="opacity: 0.2" alt="#">
             <div class="content">
-              <p>Categorey</p>
-              <h3>Summer travel collection</h3>
-              <a href="{{url('shop-profile')}}">Visit Show</a>
+              <p>{{$shop->categorey_id}}</p>
+              <h3>{{$shop->shop_name}}</h3>
+              <a href="{{url('shop-profile')}}">Visit Shop</a>
             </div>
           </div>
         </div>
-        @endfor
+        @endforeach
+        @endif
         <!-- /End Single Banner  -->
         <!-- Single Banner  -->
         <!-- <div class="col-lg-4 col-md-6 col-12">

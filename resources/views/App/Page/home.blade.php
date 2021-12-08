@@ -101,34 +101,36 @@
                 <div class="tab-pane fade show active" id="man" role="tabpanel">
                   <div class="tab-single">
                     <div class="row">
-                      @for($i = 0; $i<8; $i++)
+                      @if(!empty($all_products))
+                      @foreach($all_products as $product)
                       <div class="col-xl-3 col-lg-4 col-md-4 col-12 shadow-lg p-3 mb-5 bg-white rounded" style="box-shadow: 0px 15px 15px #0000000a;">
                         <div class=" single-product">
                           <div class="product-img">
                             <a href="{{url('product-detail')}}">
-                              <img class="default-img" src="app/images/shopTumbnail/shop.jpg" alt="#" style="height: 350px">
-                              <span class="new">Categorey</span>
+                              <img class="default-img" src="app/images/productThumbnail/{{$product->product_image_1}}" alt="#" style="height: 350px">
+                              <span class="new">{{$product->categorey_name}}</span>
                             </a>
 
                             <div class="button-head">
                               <div class="product-action">
-                                <a data-toggle="modal" data-target="#exampleModal" title="Profile" href="#"><i class=" ti-eye"></i><span>Shop Profile</span></a>
+                                <a data-toggle="modal" data-target="#exampleModal" title="Product" href="{{url('product-detail')}}"><i class=" ti-eye"></i><span>View Product</span></a>
                               </div>
                               <div class="product-action-2">
-                                <a title="View Shop" href="#">Visit Shop</a>
+                                <a title="View Prodcut Detail" href="{{url('product-detail')}}">View Detail</a>
                               </div>
                             </div>
                             <div class="product-content">
-                <h3><a href="product-details">Black Sunglass For Women</a></h3>
+                <h3><a href="product-details">{{$product->product_name}}</a></h3>
                 <div class="product-price">
-                  <span class="old">$60.00</span>
-                  <span>$50.00</span>
+                  <span class="old">Rs {{$product->sale_price}}</span>
+                  <span>Rs {{$product->sale_price - $product->discount}}</span>
                 </div>
               </div>
                           </div>
                         </div>
                       </div>
-                      @endfor
+                      @endforeach
+                      @endif
                     </div>
                   </div>
                 </div>
@@ -142,35 +144,7 @@
     </div>
   <!-- End Product Area -->
   
-  <!-- Start Midium Banner  -->
- <!--  <section class="midium-banner">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-12">
-          <div class="single-banner">
-            <img src="https://via.placeholder.com/600x370" alt="#">
-            <div class="content">
-              <p>Man's Collectons</p>
-              <h3>Man's items <br>Up to<span> 50%</span></h3>
-              <a href="#">Shop Now</a>
-            </div>
-          </div>
-        </div>
-        /End Single Banner 
-        <div class="col-lg-6 col-md-6 col-12">
-          <div class="single-banner">
-            <img src="https://via.placeholder.com/600x370" alt="#">
-            <div class="content">
-              <p>shoes women</p>
-              <h3>mid season <br> up to <span>70%</span></h3>
-              <a href="#" class="btn">Shop Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- End Midium Banner -->
+
   
   <!-- Start Most Popular -->
   <div class="product-area most-popular section" style="margin-top: -70px">
@@ -186,116 +160,29 @@
                 <div class="col-12">
                     <div class="owl-carousel popular-slider">
             <!-- Start Single Product -->
-              @for($i = 0; $i<10; $i++)
+            @if(!empty($all_shops))
+            @foreach($all_shops as $shop)
+
             <div class="single-product">
               <div class="product-img">
-                <a href="product-details.html">
-                  <img class="default-img" src="app/images/shopTumbnail/shop.jpg" alt="#">
-                  <img class="hover-img" src="app/images/shopTumbnail/shop.jpg" alt="#">
-                  <span class="out-of-stock">Categorey {{$i}}</span>
+                <a href="{{url('shop-profile')}}">
+                  <img class="default-img" src="app/images/shopTumbnail/{{$shop->profile_image}}" alt="#">
+                  <img class="hover-img" src="app/images/shopCover/{{$shop->cover_photo}}" alt="#">
+                  <span class="out-of-stock">{{$shop->categorey_id}}</span>
                 </a>
-                <div class="button-head">
-                  <div class="product-action">
-                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
-                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
-                  </div>
-                  <div class="product-action-2">
-                    <a title="Add to cart" href="#">Add to cart</a>
-                  </div>
-                </div>
               </div>
 
 
               <div class="product-content">
-                <h3><a href="product-details.html">Black Sunglass For Women</a></h3>
-                <!-- <div class="product-price">
-                  <span class="old">$60.00</span>
-                  <span>$50.00</span>
-                </div> -->
+                <h3><a href="shop-profile">{{$shop->shop_name}}</a></h3>
+                <div class="product-price">
+                  <p>{{$shop->address}}</p>
+                </div>
               </div>
             </div>
-            @endfor
-            <!-- End Single Product -->
-            <!-- Start Single Product -->
-           <!--  <div class="single-product">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="https://via.placeholder.com/550x750" alt="#">
-                                    <img class="hover-img" src="https://via.placeholder.com/550x750" alt="#">
-                                </a>
-                <div class="button-head">
-                  <div class="product-action">
-                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
-                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
-                  </div>
-                  <div class="product-action-2">
-                    <a title="Add to cart" href="#">Add to cart</a>
-                  </div>
-                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="product-details.html">Women Hot Collection</a></h3>
-                                <div class="product-price">
-                                    <span>$50.00</span>
-                                </div>
-                            </div>
-                        </div> -->
-            <!-- End Single Product -->
-            <!-- Start Single Product -->
-            <!-- <div class="single-product">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="https://via.placeholder.com/550x750" alt="#">
-                                    <img class="hover-img" src="https://via.placeholder.com/550x750" alt="#">
-                  <span class="new">New</span>
-                                </a>
-                <div class="button-head">
-                  <div class="product-action">
-                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
-                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
-                  </div>
-                  <div class="product-action-2">
-                    <a title="Add to cart" href="#">Add to cart</a>
-                  </div>
-                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="product-details.html">Awesome Pink Show</a></h3>
-                                <div class="product-price">
-                                    <span>$50.00</span>
-                                </div>
-                            </div>
-                        </div> -->
-            <!-- End Single Product -->
-            <!-- Start Single Product -->
-            <!-- <div class="single-product">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="https://via.placeholder.com/550x750" alt="#">
-                                    <img class="hover-img" src="https://via.placeholder.com/550x750" alt="#">
-                                </a>
-                <div class="button-head">
-                  <div class="product-action">
-                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
-                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
-                  </div>
-                  <div class="product-action-2">
-                    <a title="Add to cart" href="#">Add to cart</a>
-                  </div>
-                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="product-details.html">Awesome Bags Collection</a></h3>
-                                <div class="product-price">
-                                    <span>$50.00</span>
-                                </div>
-                            </div>
-                        </div> -->
-            <!-- End Single Product -->
+            @endforeach
+            @endif
+           
                     </div>
                 </div>
             </div>
@@ -346,89 +233,6 @@
   
   
 
-  
-  <!-- Start Shop Blog  -->
-  <!-- <section class="shop-blog section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title">
-            <h2>Our Team</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-12">
-          
-          <div class="shop-single-blog rounded">
-            <img src="{{asset('app/images/blogImage/arslan.jpg')}}"  class="rounded-circle" style="width: 150px;height: 150px"alt="#">
-            <div class="content">
-              <p class="date">Frontend Developer</p>
-              <a href="#" class="title">Arslan Ahmad</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 col-12">
-          
-          <div class="shop-single-blog">
-            <img src="{{asset('app/images/blogImage/zahid.jpg')}}" class="rounded-circle" style="width: 150px;height: 150px"  alt="#">
-            <div class="content">
-              <p class="date">Full Stack Developer</p>
-              <a href="#" class="title">Zahid Akbar</a>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-3 col-md-6 col-12">
-
-          <div class="shop-single-blog">
-            <img src="{{asset('app/images/blogImage/kamran.jpg')}}" class="rounded-circle" style="width: 150px;height: 150px"alt="#">
-            <div class="content">
-              <p class="date">Software Engineer</p>
-              <a href="#" class="title">Kamran Kalasra</a>
-
-            </div>
-          </div>
-
-        </div>
-
-
-        <div class="col-lg-3 col-md-6 col-12">
-
-          <div class="shop-single-blog">
-            <img src="{{asset('app/images/blogImage/rida.jpg')}}" class="rounded-circle" style="width: 150px;height: 150px"alt="#">
-            <div class="content">
-              <p class="date">Backend Developer</p>
-              <a href="#" class="title">Rida Abbas</a>
-
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-lg-3 col-md-6 col-12">
-
-          <div class="shop-single-blog">
-            <img src="{{asset('app/images/blogImage/abid.jpeg')}}" class="rounded-circle" style="width: 150px;height: 150px"alt="#">
-            <div class="content">
-              <p class="date">Backend Developer</p>
-              <a href="#" class="title">Abid Ali</a>
-
-            </div>
-          </div>
-
-        </div>
-
-        
-
-
-      </div>
-    </div>
-  </section> -->
-  <!-- End Shop Blog  -->
-
   <div class="product-area most-popular section" style="margin-top: -70px">
         <div class="container">
             <div class="row">
@@ -444,7 +248,7 @@
             <!-- Start Single Product -->
             <div class="single-product">
               <div class="product-img">
-                <a href="product-details.html">
+                <a href="#">
                   <img class="default-img" src="app/images/blogImage/zahid.jpg" style="    height: 260px;" alt="#">
                   <span class="out-of-stock">Full Stack Developer</span>
                 </a>
@@ -458,7 +262,7 @@
 
             <div class="single-product">
               <div class="product-img">
-                <a href="product-details.html">
+                <a href="#">
                   <img class="default-img" src="app/images/blogImage/arslan.jpg" alt="#">
                   <span class="out-of-stock">Frontend Developer</span>
                 </a>
@@ -472,7 +276,7 @@
 
             <div class="single-product">
               <div class="product-img">
-                <a href="product-details.html">
+                <a href="#">
                   <img class="default-img" src="app/images/blogImage/abid.jpeg" style="    height: 260px;" alt="#">
                   <span class="out-of-stock">Backend Developer</span>
                 </a>
@@ -486,7 +290,7 @@
 
             <div class="single-product">
               <div class="product-img">
-                <a href="product-details.html">
+                <a href="#">
                   <img class="default-img" src="app/images/blogImage/kamran.jpg" style="    height: 260px;" alt="#">
                   <span class="out-of-stock">Software Engineer</span>
                 </a>
@@ -500,7 +304,7 @@
 
             <div class="single-product">
               <div class="product-img">
-                <a href="product-details.html">
+                <a href="#">
                   <img class="default-img" src="app/images/blogImage/rida.jpg" style="height: 260px;" alt="#">
                   <span class="out-of-stock">Backend Developer</span>
                 </a>
