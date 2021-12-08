@@ -32,9 +32,10 @@ Route::get("/shop-profile",function(){
 	return view("App.Shop.shop_profile");
 });
 
-Route::get("/buyer-register",function(){
-	return view("App.Buyer.buyer_register");
-});
+// Route::get("/buyer-register",function(){
+// 	return view("App.Buyer.buyer_register");
+// });
+Route::get("buyer-register","Buyer\BuyerController@create");
 Route::post("save-buyer-profile","Buyer\BuyerController@register");
 Route::get("buyer-profile","Buyer\BuyerController@profile");
 

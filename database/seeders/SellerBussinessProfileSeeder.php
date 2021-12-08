@@ -15,7 +15,7 @@ class SellerBussinessProfileSeeder extends Seeder
     public function run()
     {
         SellerBussinessProfile::create([
-        	"user_id" => "4",
+        	"user_id" => "1",
 	    	"shop_name" => "Jakhar Mobile Shop",
 	    	"categorey_id" => "1",
 	    	"address" => "ward # 5 layyah",
@@ -41,6 +41,16 @@ class SellerBussinessProfileSeeder extends Seeder
 	    	"address" => "eid gha",
 	    	"profile_image" => "3.jpg",
 	    	"cover_photo" => "03.jpg",
+	    	"city" => "layyah",
+        ]);
+
+        SellerBussinessProfile::create([
+        	"user_id" => "4",
+	    	"shop_name" => "Test 2",
+	    	"categorey_id" => "3",
+	    	"address" => "main chok",
+	    	"profile_image" => "4.jpg",
+	    	"cover_photo" => "04.jpg",
 	    	"city" => "layyah",
         ]);
     }

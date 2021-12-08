@@ -13,6 +13,7 @@ class ProdcutController extends Controller
     	$all_products = DB::table('products')
         ->join('brands', 'brands.id', '=', 'products.brand_id')
         ->join('categories', 'categories.id', '=', 'products.categorey_id')
+        ->join('users', 'users.id', '=', 'products.user_id')
         ->select(
         	"brands.brand_name",
         	"categories.categorey_name",
@@ -24,6 +25,7 @@ class ProdcutController extends Controller
         	"products.discount",
         )
         ->where("products.publication_status","=", "1")
+        ->where("users.publication_status","=", "1")
         ->orderBy('products.id', 'desc')
         ->get();
    

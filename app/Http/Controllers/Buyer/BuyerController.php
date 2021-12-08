@@ -14,7 +14,7 @@ class BuyerController extends Controller
 {
 	public function create()
 	{
-		return view("Shop.Buyer.buyer_profile");
+		return view("App.Buyer.buyer_register");
 	}
 
 
