@@ -19,13 +19,13 @@
                 <div class="cover">
                     <div class="gray-shade"></div>
                     <figure>
-                        <img src="https://bootdey.com/img/Content/bg1.jpg" class="img-fluid" alt="profile cover">
+                        <img src="{{ asset('app/images/shopCover') }}/{{ $shop_profile->cover_photo}}" class="img-fluid" alt="profile cover" style="height: 500px !important">
                         <!-- <img src="{{ asset('') }}img/01.jpg" class="img-fluid" alt="profile cover" style="max-height: 550px;"> -->
                     </figure>
                     <div class="cover-body d-flex justify-content-between align-items-center">
                         <div>
-                            <img class="profile-pic" src="{{ asset('img/2.jpg') }}" alt="profile" style="height: 120px;">
-                            <span class="profile-name">{{ $profile_information->shop_name ?? "Unknown" }}</span>
+                            <img class="profile-pic" src="{{ asset('app/images/shopTumbnail') }}/{{ $shop_profile->profile_image}}" alt="profile" style="height: 120px;">
+                            <span class="profile-name">{{ $shop_profile->shop_name ?? "Unknown" }}</span>
                         </div>
                        
                     </div>

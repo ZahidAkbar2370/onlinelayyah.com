@@ -1,6 +1,7 @@
 @extends('App.Shop.shop_profile_layout')
 @section("content")
 
+<!--  -->
  <div class="row profile-body">
         <!-- left wrapper start -->
         <div class="d-none d-md-block col-md-4 col-sm-2 col-xl-3 left-wrapper">
@@ -39,19 +40,19 @@
                     <p>{{ $profile_information->about_me ?? "hi i m zahid" }}</p>
                     <div class="mt-3">
                         <label class="tx-11 font-weight-bold mb-0 text-uppercase">Shop Owner:</label>
-                        <p class="text-muted">{{ $profile_information->owner_name ?? "zahid" }}</p>
+                        <p class="text-muted">{{ $shop_profile->first_name ?? ''}} {{ $shop_profile->first_name ?? "zahid" }}</p>
                     </div>
                     <div class="mt-3">
                         <label class="tx-11 font-weight-bold mb-0 text-uppercase">Shop Name:</label>
-                        <p class="text-muted">{{ $profile_information->shop_name ?? "khan mobile" }}</p>
+                        <p class="text-muted">{{ $shop_profile->shop_name ?? "khan mobile" }}</p>
                     </div>
                     <div class="mt-3">
                         <label class="tx-11 font-weight-bold mb-0 text-uppercase">location:</label>
-                        <p class="text-muted">{{ $profile_information->address  ?? "layyah" }}</p>
+                        <p class="text-muted">{{ $shop_profile->city  ?? "layyah" }}</p>
                     </div>
                     <div class="mt-3">
                         <label class="tx-11 font-weight-bold mb-0 text-uppercase">Contact:</label>
-                        <p class="text-muted">{{ $profile_information->mobile_no ?? "03081312527" }}</p>
+                        <p class="text-muted">{{ $shop_profile->mobile_no ?? "03081312527" }}</p>
                     </div>
                     <div class="mt-3 d-flex social-links">
                         <a href="javascript:;" class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon github">
@@ -79,21 +80,21 @@
         <!-- middle wrapper start -->
         <div class="col-md-8 col-xl-6 middle-wrapper">
             <div class="row">
-                @if (!empty($all_products))
-                    @foreach ($all_products as $product)
+                @if (!empty($shop_products))
+                    @foreach ($shop_products as $product)
                 
                     <div class="col-md-12 grid-margin">
                         <div class="card rounded">
                             <div class="card-header">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
-                                        <img class="img-xs rounded-circle" src="{{ asset('img/2.jpg') }}" alt="">
+                                        <img class="img-xs rounded-circle" src="{{ asset('app/images/shopTumbnail') }}/{{ $shop_profile->profile_image}}" alt="">
                                         <div class="ml-2">
-                                            <p>{{ $profile_information->shop_name }}</p>
+                                            <spam>{{ $shop_profile->shop_name ?? ''}}</spam>
                                             <p class="tx-11 text-muted">{{ $product->created_at }}</p>
                                         </div>
                                     </div>
-                                    <div class="dropdown">
+                                    <!-- <div class="dropdown">
                                         <button class="btn p-0" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal icon-lg pb-3px">
                                                 <circle cx="12" cy="12" r="1"></circle>
@@ -128,13 +129,13 @@
                                                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                                 </svg> <span class="">Copy link</span></a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="card-body">
                                 <h4 class="mb-3 tx-14">{{ $product->product_name }}</h4>
-                                <p class="mb-3 tx-14">{{ $product->category_name }} - {{ $product->brand_name }}</p>
-                                <a href="{{url('product-detail')}}"><img class="img-fluid" src="{{ asset('img/shop/cart/widget/04.jpg') }}" alt="" style="max-height: 400px;width: 100%;"></a>
+                                <p class="mb-3 tx-14">{{ $product->categorey_name }} - {{ $product->brand_name }}</p>
+                                <a href="{{url('product-detail',$product->id)}}"><img class="img-fluid" src="{{ asset('app/images/productThumbnail') }}/{{ $product->product_image_1}}" alt="" style="max-height: 400px;width: 100%;"></a>
                             </div>
 
 
@@ -163,6 +164,16 @@
                                         </svg>
                                         <p class="d-none d-md-block ml-2">Share</p>
                                     </a>
+
+                                    <a href="javascript:;" class="d-flex align-items-center text-muted">
+                                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy icon-md">
+                                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                                            <polyline points="16 6 12 2 8 6"></polyline>
+                                            <line x1="12" y1="2" x2="12" y2="15"></line>
+                                        </svg> -->
+                                        <p class="d-none d-md-block ml-2">Copy Link</p>
+                                    </a>
+
                                     <div class="bottom-wrap"> 
                     
                                     </div>

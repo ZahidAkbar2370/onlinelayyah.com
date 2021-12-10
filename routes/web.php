@@ -18,6 +18,10 @@ Route::get("/contact",function(){
 	return view("App.Page.contact_form");
 });
 
+Route::get("/become-a-seller",function(){
+	return view("App.Page.become_a_seller");
+});
+
 // Route::get("/index",function(){
 // 	return view("App.Page.home");
 // });
@@ -27,10 +31,11 @@ Route::get("product-detail/{id}","Buyer\ProdcutController@productDetail");
 Route::post("buyer-add-to-cart","Buyer\CartController@store");
 
 Route::get("shops","Buyer\ShopController@shops");
+Route::get("shop-profile/{id}","Buyer\ShopController@shopProfile");
 
-Route::get("/shop-profile",function(){
-	return view("App.Shop.shop_profile");
-});
+// Route::get("shop-profile",function(){
+// 	return view("App.Shop.shop_profile");
+// });
 
 // Route::get("/buyer-register",function(){
 // 	return view("App.Buyer.buyer_register");

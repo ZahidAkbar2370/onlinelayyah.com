@@ -203,7 +203,7 @@
                             </ul>
                           </li> -->
                           <li><a href="{{url('contact')}}">Contact Us</a></li>
-                          <li><a href="#"  data-toggle="modal" data-target="#exampleModal">Become a Seller</a></li>
+                          <li><a href="{{url('become-a-seller')}}" >Become a Seller</a></li>
                         </ul>
                     </div>
                   </div>
