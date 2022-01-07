@@ -10,6 +10,18 @@ Route::get("/",function(){
 	return redirect("index");
 });
 
+Route::get("admin-layout",function(){
+	return view("Admin.admin_layout");
+});
+
+Route::get("admin-add-admin",function(){
+	return view("Admin.Admin.add_admin");
+});
+
+Route::get("admin-view-admins",function(){
+	return view("Admin.Admin.view_admins");
+});
+
 Route::get("/test",function(){
 	return view("App.app_layout");
 });
@@ -144,7 +156,7 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::get("seller-view-loans/{id}","Seller\LoanController@index");
 		Route::get("seller-delete-loan/{id}","Seller\LoanController@destroy");
 
-		//Loan
+		//Email
 		Route::get("seller-add-email","Seller\EmailController@create");
 		Route::post("seller-save-add-email","Seller\EmailController@store");
 		Route::get("seller-view-emails","Seller\EmailController@index");
