@@ -32,7 +32,7 @@
 										<h5>Personal Information</h5>
 									</div>
 								</div>
-								<form class="form" method="post" action="mail/mail.php">
+								<form class="form" method="post" action="">
 									<div class="row">
 										
 										<div class="col-lg-4 col-12">

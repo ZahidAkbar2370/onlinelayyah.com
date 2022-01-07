@@ -29,7 +29,7 @@
             <div class="content">
               <p>{{$shop->categorey_id}}</p>
               <h3>{{$shop->shop_name}}</h3>
-              <a href="{{url('shop-profile')}}">Visit Shop</a>
+              <a href="{{url('shop-profile', $shop->id)}}">Visit Shop</a>
             </div>
           </div>
         </div>
