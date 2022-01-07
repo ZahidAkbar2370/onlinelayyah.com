@@ -24,6 +24,8 @@
 						<tr>
 							<th>Sr #</th>
 							<th>Product Name</th>
+							<th>Categorey</th>
+							<th>Brand</th>
 							<th>Sale Price</th>
 							<th>Quantity</th>
 							<th>Sale Type</th>
@@ -49,6 +51,8 @@
 							<tr>
 								<td>{{$key}}</td>
 								<td>{{$product->product_name}}</td>
+								<td>{{$product['categorey']->categorey_name}}</td>
+								<td>{{$product['brand']->brand_name}}</td>
 								<td>{{$product->sale_price}}</td>
 								<td>{{$product->quantity}}</td>
 								<td>{{$product->sale_type}}</td>

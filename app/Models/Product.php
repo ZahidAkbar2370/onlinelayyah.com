@@ -34,4 +34,14 @@ class Product extends Model
         'publication_status',
     
     ];
+
+    public function categorey()
+    {
+        return $this->belongsTo("App\Models\Categorey", "categorey_id", "id");
+    }
+
+    public function brand()
+    {
+        return $this->belongsTo("App\Models\brand", "categorey_id", "id");
+    }
 }

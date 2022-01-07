@@ -61,7 +61,7 @@ class ProductController extends Controller
     {
         $user_id = Auth::user()->id ?? 1;
 
-        $all_products = Product::where("user_id", $user_id)->get();
+        $all_products = Product::where("user_id", $user_id)->with("categorey")->with("brand")->get();
 
         return view("Seller.Product.view_products")
         ->with("all_products", $all_products);

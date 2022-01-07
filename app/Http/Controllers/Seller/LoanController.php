@@ -36,10 +36,17 @@ class LoanController extends Controller
     {
         $user_id = Auth::user()->id ?? 1;
 
-        $all_loans = Loan::where("user_id", $user_id)->where("customer_id", $id)->get();
+        $all_loans = Loan::where("user_id", $user_id)->where("customer_id", $id)->with("customer")->get();
+        
+        $recived_amount = Loan::where("user_id", $user_id)->where("customer_id", $id)->where("loan_type", "recive")->sum("amount");
+
+        $give_amount = Loan::where("user_id", $user_id)->where("customer_id", $id)->where("loan_type", "give")->sum("amount");
+
 
         return view("Seller.Loan.view_loans")
         ->with("all_loans", $all_loans)
+        ->with("recived_amount", $recived_amount)
+        ->with("give_amount", $give_amount)
         ->with("id", $id);
     }
 

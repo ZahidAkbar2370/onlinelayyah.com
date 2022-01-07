@@ -274,7 +274,7 @@
               </div>
             </div>
 
-            <div class="single-product">
+            <!-- <div class="single-product">
               <div class="product-img">
                 <a href="#">
                   <img class="default-img" src="app/images/blogImage/abid.jpeg" style="    height: 260px;" alt="#">
@@ -286,7 +286,7 @@
               <div class="product-content">
                 <h3 class="text-center"><a href="#">Abid Ali</a></h3>
               </div>
-            </div>
+            </div> -->
 
             <div class="single-product">
               <div class="product-img">

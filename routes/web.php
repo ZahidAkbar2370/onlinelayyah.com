@@ -126,8 +126,8 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::get("seller-add-product","Seller\ProductController@create");
 		Route::post("seller-save-add-product","Seller\ProductController@store");
 		Route::get("seller-view-products","Seller\ProductController@index")->name('seller-view-products');
-		Route::get("seller-edit-expense/{id}","Seller\ProductController@edit");
-		Route::post("seller-update-expense/{id}","Seller\ProductController@update");
+		// Route::get("seller-edit-expense/{id}","Seller\ProductController@edit");
+		// Route::post("seller-update-expense/{id}","Seller\ProductController@update");
 		Route::get("seller-delete-product/{id}","Seller\ProductController@destroy");
 
 		//Change Password

@@ -19,4 +19,14 @@ class PurchaseStock extends Model
         "purchase_price",
         "total_price",
     ];
+
+    public function supplier()
+    {
+        return $this->belongsTo("App\Models\Supplier", "supplier_id", "id");
+    }
+
+    public function product()
+    {
+        return $this->belongsTo("App\Models\Product", "product_id", "id");
+    }
 }

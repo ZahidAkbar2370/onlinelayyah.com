@@ -20,4 +20,9 @@ class Loan extends Model
         'bill',
         'loan_date',
     ];
+
+    public function customer()
+    {
+        return $this->belongsTo("App\Models\customer", "customer_id", "id");
+    }
 }

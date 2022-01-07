@@ -10,6 +10,9 @@
 <a style="width: 190px"><button type="button" class="btn btn-primary" data-toggle="modal" style="width: 190px" data-target="#exampleModal">
   Add Loan
 </button></a>
+<span>Give: <b>{{$give_amount ?? 0}}</b></span>
+<span>Recived: <b>{{$recived_amount ?? 0}}</b></span>
+<span>Remaining Total: <b>{{$give_amount - $recived_amount ?? 0}}</b></span>
 		<div class="col-12 col-md-12 col-lg-12 col-xxl-12 d-flex">
 			<div class="card flex-fill">
 				
@@ -32,7 +35,7 @@
 						@foreach($all_loans as $key => $loan)
 							<tr>
 								<td>{{$key}}</td>
-								<td>{{$loan->customer_id}}</td>
+								<td>{{$loan["customer"]->customer_name}}</td>
 								<td>{{$loan->loan_type}}</td>
 								<td>{{$loan->amount}}</td>
 								<td>{{$loan->description}}</td>

@@ -38,8 +38,16 @@
                                         </div>
 
                                         <div class="mb-3">
-                                            <label class="form-label">Product ID</label>
-                                            <input id="product_id" class="form-control form-control-lg @error('product_id') is-invalid @enderror" value="{{ old('product_id') }}" type="number" name="product_id" placeholder="Enter Product Id" required  autocomplete="product_id" autofocus/>
+                                            <label class="form-label">Product Name</label>
+                                            <select id="product_id" class="form-control form-control-lg @error('product_id') is-invalid @enderror" value="{{ old('product_id') }}" name="product_id"  autocomplete="product_id" autofocus>
+                                                <option value="">Select Product</option>
+                                                @if(!empty($all_products))
+                                                    @foreach($all_products as $product)
+                                                        <option value="{{ $product->id}}">{{ $product->product_name}}</option>
+                                                    @endforeach
+                                                @endif
+                                            </select>
+                                           <!--  <input id="product_id" class="form-control form-control-lg @error('product_id') is-invalid @enderror" value="{{ old('product_id') }}" type="number" name="product_id" placeholder="Enter Product Id" required  autocomplete="product_id" autofocus/> -->
 
                                             @error('product_id')
                                                 <span class="invalid-feedback" role="alert">

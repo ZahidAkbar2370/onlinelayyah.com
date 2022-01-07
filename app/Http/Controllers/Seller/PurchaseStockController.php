@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\PurchaseStock;
 use App\Models\Supplier;
+use App\Models\Product;
 
 class PurchaseStockController extends Controller
 {
@@ -15,9 +16,11 @@ class PurchaseStockController extends Controller
     	$user_id = Auth::user()->id ?? 1;
 
     	$all_suppliers = Supplier::where("user_id", $user_id)->get();
+        $all_products = Product::where("user_id", $user_id)->get();
 
     	return view("Seller.PurchaseStock.add_purchase_stock")
-    	->with("all_suppliers", $all_suppliers);
+    	->with("all_suppliers", $all_suppliers)
+        ->with("all_products", $all_products);
     }
 
     public function store(Request $request)
@@ -33,6 +36,15 @@ class PurchaseStockController extends Controller
 	        "total_price" => $request->total_price,
         ]);
 
+        $id = $request->product_id;
+
+        $update_product_quantity = Product::find($id);
+
+        $previous_quantity = $update_product_quantity->quantity;
+        $update_product_quantity->quantity = $previous_quantity+$request->quantity;
+
+        $update_product_quantity->update();
+
         return redirect("seller-view-purchase-stocks");
     }
 
@@ -40,7 +52,7 @@ class PurchaseStockController extends Controller
     {
     	$user_id = Auth::user()->id ?? 1;
 
-    	$all_purchase_stocks = PurchaseStock::where("user_id", $user_id)->get();
+    	$all_purchase_stocks = PurchaseStock::where("user_id", $user_id)->with("supplier")->with("product")->get();
 
     	return view("Seller.PurchaseStock.view_purchase_stocks")
     	->with("all_purchase_stocks", $all_purchase_stocks);

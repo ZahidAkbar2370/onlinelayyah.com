@@ -35,8 +35,8 @@
 						@foreach($all_purchase_stocks as $key => $stock)
 							<tr>
 								<td>{{$key}}</td>
-								<td>{{$stock->supplier_id}}</td>
-								<td>{{$stock->product_id}}</td>
+								<td>{{$stock["supplier"]->name}}</td>
+								<td>{{$stock["product"]->product_name}}</td>
 								<td>{{$stock->quantity}}</td>
 								<td>{{$stock->purchase_price}}</td>
 								<td>{{$stock->total_price}}</td>
