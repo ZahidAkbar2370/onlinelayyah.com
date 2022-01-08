@@ -33,6 +33,7 @@ Route::get("/contact",function(){
 Route::get("/become-a-seller",function(){
 	return view("App.Page.become_a_seller");
 });
+Route::post("become-a-seller", "BecomeASellerController@store");
 
 // Route::get("/index",function(){
 // 	return view("App.Page.home");

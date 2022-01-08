@@ -6,9 +6,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Brand;
 use Auth;
+use Http;
 
 class BrandController extends Controller
 {
+    public function getTest()
+    {
+        $all_users = Http::get("http://localhost/Expense_Management_System/public/api/test");
+
+        return $all_users;
+    }
+
     public function create()
     {
     	return view("Seller.Brand.add_brand");
