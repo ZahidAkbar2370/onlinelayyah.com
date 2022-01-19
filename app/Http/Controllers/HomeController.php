@@ -23,6 +23,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('seller-add-brand');
+        if (!empty(auth()->user()) && auth()->user()->status == 'admin')
+        {
+            return redirect('admin-layout');
+        }
+        else if (!empty(auth()->user()) && auth()->user()->status == 'seller'){
+            return redirect('seller-dashboard');
+        }
     }
 }
