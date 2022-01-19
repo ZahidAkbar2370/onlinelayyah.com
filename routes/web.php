@@ -10,17 +10,6 @@ Route::get("/",function(){
 	return redirect("index");
 });
 
-Route::get("admin-layout",function(){
-	return view("Admin.admin_layout");
-});
-
-Route::get("admin-add-admin",function(){
-	return view("Admin.Admin.add_admin");
-});
-
-Route::get("admin-view-admins",function(){
-	return view("Admin.Admin.view_admins");
-});
 
 Route::get("/test",function(){
 	return view("App.app_layout");
@@ -75,9 +64,25 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		// 	return view("welcome");
 		// });
 
+		Route::get("admin-layout",function(){
+			return view("Admin.admin_layout");
+		});
+
+		Route::get("admin-add-admin",function(){
+			return view("Admin.Admin.add_admin");
+		});
+
+		Route::get("admin-view-admins",function(){
+			return view("Admin.Admin.view_admins");
+		});
+
 	});
 
 	Route::middleware([CheckStatusSeller::class])->group(function(){
+
+
+		//Dashboard
+		Route::get("seller-dashboard","Seller\DashboardController@index");
 
 		//Profiles
 		Route::get("seller-personal-profile","Seller\PersonalProfileController@personalProfile");

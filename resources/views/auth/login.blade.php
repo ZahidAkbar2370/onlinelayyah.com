@@ -58,7 +58,15 @@
                                         </div>
                                     </form>
                                 </div>
+                            
+                            <h5>Admin</h5>
+                            <p>Email: admin@gmail.com</p>
+                            <p>Password: admin123</p>
+                            <h5>Seller</h5>
+                            <p>Email: seller@gmail.com</p>
+                            <p>Password: seller123</p>
                             </div>
+                            
                         </div>
 
                     </div>

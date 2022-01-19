@@ -5,10 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Admin Panel</title>
 
-	<link href="admin_backend/css/bootstrap.min.css" rel="stylesheet">
-	<link href="admin_backend/css/font-awesome.min.css" rel="stylesheet">
-	<link href="admin_backend/css/datepicker3.css" rel="stylesheet">
-	<link href="admin_backend/css/styles.css" rel="stylesheet">
+	<link href="{{asset('admin_backend/css/bootstrap.min.css')}}" rel="stylesheet">
+	<link href="{{asset('admin_backend/css/font-awesome.min.css')}}" rel="stylesheet">
+	<link href="{{asset('admin_backend/css/datepicker3.css')}}" rel="stylesheet">
+	<link href="{{asset('admin_backend/css/styles.css')}}" rel="stylesheet">
 	
 	<!--Custom Font-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -114,14 +114,14 @@
 
 
 
-	<script src="admin_backend/js/jquery-1.11.1.min.js"></script>
-	<script src="admin_backend/js/bootstrap.min.js"></script>
-	<script src="admin_backend/js/chart.min.js"></script>
-	<script src="admin_backend/js/chart-data.js"></script>
-	<script src="admin_backend/js/easypiechart.js"></script>
-	<script src="admin_backend/js/easypiechart-data.js"></script>
-	<script src="admin_backend/js/bootstrap-datepicker.js"></script>
-	<script src="admin_backend/js/custom.js"></script>
+	<script src="{{asset('admin_backend/js/jquery-1.11.1.min.js')}}"></script>
+	<script src="{{asset('admin_backend/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('admin_backend/js/chart.min.js')}}"></script>
+	<script src="{{asset('admin_backend/js/chart-data.js')}}"></script>
+	<script src="{{asset('admin_backend/js/easypiechart.js')}}"></script>
+	<script src="{{asset('admin_backend/js/easypiechart-data.js')}}"></script>
+	<script src="{{asset('admin_backend/js/bootstrap-datepicker.js')}}"></script>
+	<script src="{{asset('admin_backend/js/custom.js')}}"></script>
 
 
 </body>
