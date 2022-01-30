@@ -46,5 +46,3 @@
 			</div><!-- /.col-->
 		</div><!-- /.row -->
 	</div><!--/.main-->
-
-@endsection
