@@ -48,5 +48,20 @@ if($delete)
 {
 return redirect()->route('admin-advertisement-view')->with('advertisementdeleted','Your Advertisement Is Successfully Deleted');
 }
+}
+public function edit($ads)
+{
+$ads=Advertisement::with('product')->where(['id'=>$ads])->first();
+return view('Admin.Advertisement.edit_advertisement')->with('ads',$ads);
+}
+public function update(ValidateAdvertisement $request, $ads)
+{
+$ads=Advertisement::find($ads);
+$update=$ads->update(['start_date'=>$request->start_date,'end_date'=>$request->end_date,'status'=>$request->status]);
+if($update)
+{
+return redirect()->route('admin-advertisement-view')->with('advertisementupdated','Advertisement is successfully Updated');    
+}
 }    
+
 }

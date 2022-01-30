@@ -7,7 +7,6 @@
 <link href="{{asset('admin_backend/css/bootstrap.min.css')}}" rel="stylesheet">
 <link href="{{asset('admin_backend/css/datepicker3.css')}}" rel="stylesheet">
 <link href="{{asset('admin_backend/css/styles.css')}}" rel="stylesheet">
-<link href="{{asset('admin_backend/css/all.css')}}" rel="stylesheet">
 <!-- DataTables -->
 <link rel="stylesheet" href="{{asset('admin_backend/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}" />
 <link rel="stylesheet" href="{{asset('admin_backend/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}"/>

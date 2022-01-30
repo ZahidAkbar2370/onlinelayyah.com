@@ -12,8 +12,8 @@ public function rules()
 {
 return 
 [
-'product_id'=>'required|notIn:0',
-'status'=>'required|notIn:0|in:1,2,3',
+'product_id'=>'required|notIn:null',
+'status'=>'required|notIn:null|In:active,inactive,expire',
 'start_date'=>'required|date',
 'end_date'=>'required|date|after_or_equal:start_date'
 ];

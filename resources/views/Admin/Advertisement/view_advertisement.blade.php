@@ -41,8 +41,8 @@ text-align:center;
 <th>End Date</th>
 <th>Label</th>
 <th>Status</th>
-<td>Action</td>
-<td>Action</td>
+<th>Update</th>
+<th>Delete</th>
 </tr>
 </thead>
 <tbody>
@@ -56,7 +56,7 @@ text-align:center;
 <td>{{$ads->status}}</td>
 <td>{{$ads->label}}</td>
 <td>
-<a href="">
+<a href="{{route('admin-advertisement-edit',$ads->id)}}">
 <span class="fa fa-edit"></span>   
 </a>
 </td>
@@ -79,12 +79,13 @@ text-align:center;
 </div><!--/.main-->
 @endsection
 @section('extra-js')
+<!-- Including datatable-->
 <script>
  $(document).ready(function(){
 $('#dataTable').DataTable();
 });  
 </script>
-
+<!-- Sweat alert if advertisement is added-->
 @if($message=Session::get('advertisementadded'))
 <script>
 Swal.fire({
@@ -94,11 +95,11 @@ iconColor: 'green',
 title: 'Your Advertisement Is Successfully Added',
 timerProgressBar: true,
 showConfirmButton: false,
-timer: 3000
+timer: 2000
 });
 </script>
 @endif
-
+<!-- Sweat alert if advertisement is deleted -->
 @if($message=Session::get('advertisementdeleted'))
 <script>
 Swal.fire({
@@ -108,7 +109,21 @@ iconColor: 'red',
 title: 'Your Advertisement Is Successfully Deleted',
 timerProgressBar: true,
 showConfirmButton: false,
-timer: 3000
+timer: 2000
+});
+</script>
+@endif
+<!-- Sweat alert if advertisement is updated -->
+@if($message=Session::get('advertisementupdated'))
+<script>
+Swal.fire({
+position: 'top-center',
+icon: 'success',
+iconColor: 'orange',
+title: 'Your Advertisement Is Successfully Updated',
+timerProgressBar: true,
+showConfirmButton: false,
+timer: 2000
 });
 </script>
 @endif
