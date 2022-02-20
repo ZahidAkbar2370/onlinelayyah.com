@@ -56,7 +56,17 @@ Route::get("/check-out",function(){
 });
 
 
-Route::middleware([CheckPublicationStatus::class])->group(function(){
+	// Routes for Advertisements
+	Route::get('admin-view-advertisement','Admin\AdvertisementController@index')->name('admin-advertisement-view');
+	Route::get('admin-create-advertisement','Admin\AdvertisementController@create')->name('admin-advertisement-create');
+	Route::get('admin-add-advertisement','Admin\AdvertisementController@store')->name('admin-advertisement-store');
+	Route::get('admin-delete-advertisement/{ads}','Admin\AdvertisementController@destroy')->name('admin-advertisement-delete');
+	Route::get('admin-edit-advertisement/{ads}','Admin\AdvertisementController@edit')->name('admin-advertisement-edit');
+	Route::get('admin-update-advertisement/{ads}','Admin\AdvertisementController@update')->name('admin-advertisement-update');
+
+	Route::middleware([CheckPublicationStatus::class])->group(function(){
+
+/////////////////////// Admin Routes ///////////////////////
 
 	Route::middleware([CheckStatusAdmin::class])->group(function(){
 
@@ -77,6 +87,10 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		});
 
 	});
+
+
+// //////////////////////// Seller Routes /////////////////
+
 
 	Route::middleware([CheckStatusSeller::class])->group(function(){
 
@@ -173,6 +187,9 @@ Route::middleware([CheckPublicationStatus::class])->group(function(){
 		Route::get("seller-delete-order/{id}","Seller\OrderController@deleteOrder");
 
 	});
+
+
+// //////////////  Buyer Routes ////////////
 
 	Route::middleware([CheckStatusBuyer::class])->group(function(){
 
