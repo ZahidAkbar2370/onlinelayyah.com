@@ -149,7 +149,11 @@
                 <a href="{{url('cart')}}" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
               </div>
                <div class="sinlge-bar">
-                <a href="#" class="single-icon"><i class="ti-power-off"></i></a>
+                <form action="{{route('logout')}}" method="post">
+                  @csrf
+                  <button type="submit" class="single-icon"><i class="ti-power-off"></i></button>
+                  
+                </form>
               </div>
               @else
               <div class="sinlge-bar">
