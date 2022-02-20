@@ -72,6 +72,7 @@
                     </div>
                   </div>
                 </div>
+                {{$all_products->links()}}
                 <!--/ End Single Tab -->
 
               

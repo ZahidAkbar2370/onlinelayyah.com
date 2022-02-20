@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->integer("quantity");
             $table->string("sale_type");
             $table->integer("discount")->nullable()->default(0);
-            $table->string("product_image_1")->nullable()->default("product_image.png");
+            $table->string("product_image_1")->nullable()->default("04.jpg");
             $table->string("product_image_2")->nullable();
             $table->string("product_image_3")->nullable();
             $table->string("lable")->nullable();

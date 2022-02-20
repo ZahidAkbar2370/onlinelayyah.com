@@ -27,7 +27,7 @@ class ProdcutController extends Controller
         ->where("products.publication_status","=", "1")
         ->where("users.publication_status","=", "1")
         ->orderBy('products.id', 'desc')
-        ->get();
+        ->paginate(22);
    
         
     	return view("App.Product.products")

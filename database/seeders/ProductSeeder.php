@@ -127,6 +127,6 @@ class ProductSeeder extends Seeder
 
         // ]);
 
-        \App\Models\Product::factory(10)->create()
+        \App\Models\Product::factory(10)->create();
     }
 }

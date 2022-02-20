@@ -26,7 +26,7 @@ class ProductFactory extends Factory
             "quantity" => $this->faker->numberBetween(10,18),
             "sale_type" => "online",
             "discount" => $this->faker->numberBetween(1,8),
-            "product_image_1" => "image1.jpg",
+            "product_image_1" => "04.jpg",
             "product_image_2" => "image2.jpg",
             "product_image_3" => "image3.jpg",
             "lable" => "lab",

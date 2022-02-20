@@ -18,7 +18,7 @@ class ShopController extends Controller
         ->where("users.publication_status","=", "1")
         ->where("users.status","=", "seller")
         ->orderBy('users.id', 'desc')
-        ->get();
+        ->paginate(22);
 
         // echo "<pre>";
         // print_r($all_shops);exit;
