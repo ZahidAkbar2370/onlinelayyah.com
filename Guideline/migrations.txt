@@ -140,3 +140,13 @@ quantity  (string, required)
 purchase_price (string, required)
 total_purchase_price (string, required)
 
+///////////////////////////////////////////////////////////////////////////////
+
+shop_advertisements:
+
+id
+shop_id
+start_data
+end_data
+status
+

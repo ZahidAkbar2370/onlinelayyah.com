@@ -33,9 +33,35 @@
 								<td>{{$order->grand_total}}</td>
                                 <td>{{$order->status}}</td>
 								<td>{{$order->created_at}}</td>
+
+								@if($order->status == "pending")
 								<td>
-                                    <a href="{{url('seller-delete-order',$order->invoiceID)}}" class="btn btn-danger"><i class="align-middle" data-feather="trash-2"></i> <span class="align-middle"></span></a>
+                                    <a href="{{url('seller-view-order',$order->invoiceID)}}" class="btn btn-info" title="view order detail"><i class="align-middle" data-feather="eye" ></i> <span class="align-middle"></span></a>
                                 </td>
+
+                                <td>
+                                    <a href="{{url('seller-confirm-order',$order->invoiceID)}}" class="btn btn-success" title="confirm order"><i class="align-middle" data-feather="check"></i> <span class="align-middle"></span></a>
+                                </td>
+
+                                <td>
+                                    <a href="{{url('seller-delete-order',$order->invoiceID)}}" class="btn btn-danger" title="delete order"><i class="align-middle" data-feather="trash-2"></i> <span class="align-middle"></span></a>
+                                </td>
+                                
+                                @elseif($order->status == "confirm")
+	                                <td>
+	                                    <a href="{{url('seller-view-order',$order->invoiceID)}}" class="btn btn-info" title="view order detail"><i class="align-middle" data-feather="eye"></i> <span class="align-middle"></span></a>
+	                                </td>
+
+                                	<td>
+                                    	<a href="{{url('seller-deliver-order',$order->invoiceID)}}" class="btn btn-secondary" title="delivered"><i class="align-middle" data-feather="truck"></i> <span class="align-middle"></span></a>
+                                	</td>
+                                @else
+
+                                	<td>
+                                    	<a href="{{url('seller-cashed-order',$order->invoiceID)}}" class="btn btn-primary" title="cashed"><i class="align-middle" data-feather="dollar-sign"></i> <span class="align-middle"></span></a>
+                                	</td>
+
+                                @endif
 							</tr>
 						@endforeach
 						@endif

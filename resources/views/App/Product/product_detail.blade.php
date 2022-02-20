@@ -185,6 +185,7 @@
 								<!-- End Single Post -->
 							</div>
 							<!-- Single Widget -->
+							@if(!empty(Auth::user()) && Auth::user()->status == "buyer")
 							<div class="single-widget newsletter">
 								<h3 class="title">Add TO Cart</h3>
 								<div class="letter-inner">
@@ -196,17 +197,14 @@
 											<input type="hidden" name="product_id" value="{{ $select_product->productID}}">
 											<input type="hidden" name="discount" value="{{ $select_product->discount}}">
 											<input type="hidden" name="price" value="{{ $select_product->sale_price}}">
-											@if(!empty(Auth::user()) && Auth::user()->status == "buyer")
+											
 											<input type="number" name="quantity" placeholder="Enter Quantity" required="true" min="1">
 											<a><input type="submit" style="background-color: #F7941D" name=""></a>
-											@else
-												<input type="number" placeholder="Enter Quantity" required="true" min="1">
-												<a><input type="submit"  data-toggle="modal" data-target="#product_detail" style="background-color: #F7941D" name=""></a>
-											@endif
 										</form>
 									</div>
 								</div>
 							</div>
+						@endif
 							<!--/ End Single Widget -->
 						</div>
 					</div>

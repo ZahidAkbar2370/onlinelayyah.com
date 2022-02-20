@@ -21,6 +21,11 @@
 		<div class="container">
 				<div class="contact-head">
 					<div class="row">
+						<h3 style="background-color:green">
+							@if(!empty($successMessage))
+						 		{{$successMessage}} 
+						 	@endif
+						</h3>
 						<div class="col-lg-12 col-12">
 							<div class="form-main">
 								<div class="title text-center">
@@ -33,30 +38,31 @@
 									</div>
 								</div>
 								<form class="form" method="post" action="{{URL::to('become-a-seller')}}">
+									@csrf
 									<div class="row">
 										
 										<div class="col-lg-4 col-12">
 											<div class="form-group">
 												<label>First Name<span>*</span></label>
-												<input name="first_name" type="text" placeholder="Enter Your First Name">
+												<input name="first_name" type="text" placeholder="Enter Your First Name" required>
 											</div>
 										</div>
 										<div class="col-lg-4 col-12">
 											<div class="form-group">
 												<label>Last Name<span>*</span></label>
-												<input name="last_name" type="text" placeholder="Enter Your Last Name">
+												<input name="last_name" type="text" placeholder="Enter Your Last Name" required>
 											</div>
 										</div>
 										<div class="col-lg-4 col-12">
 											<div class="form-group">
 												<label>Mobile Number<span>*</span></label>
-												<input name="mobile_no" type="email" placeholder="Enter Your Mobile Number ">
+												<input name="mobile_no" type="number" placeholder="Enter Your Mobile Number" required>
 											</div>	
 										</div>
 										<div class="col-lg-4 col-12">
 											<div class="form-group">
-												<label>Whatsapp Number<span>*</span></label>
-												<input name="whatsapp_no" type="text" placeholder="Enter Your Whatsapp Number">
+												<label>Whatsapp Number</label>
+												<input name="whatsapp_no" type="number" placeholder="Enter Your Whatsapp Number">
 											</div>	
 										</div>
 										<div class="col-lg-4 col-12">
@@ -96,37 +102,44 @@
 										<div class="col-lg-4 col-12">
 											<div class="form-group">
 												<label>Your Product Categorey<span>*</span></label>
-												<input name="categorey_id" type="text" placeholder="Enter Your Product Categorey">
+												<br>
+												<select name="categorey_id" style="width: 100%;">
+													<option value="">Select Shop Categorey</option>
+													<option value="1">Mobile Shop</option>
+													<option value="2">Laptop Shop</option>
+													<option value="3">Accessories</option>
+													<option value="4">Garments</option>
+												</select>
 											</div>
 										</div>
 										<div class="col-lg-4 col-12">
 											<div class="form-group">
 												<label>Your Shop Name<span>*</span></label>
-												<input name="shop_name" type="text" placeholder="Enter Your Shop Name">
+												<input name="shop_name" type="text" placeholder="Enter Your Shop Name" required>
 											</div>
 										</div>
 										<div class="col-lg-4 col-12">
 											<div class="form-group">
 												<label>Your Address<span>*</span></label>
-												<input name="address" type="text" placeholder="Enter Your Address">
+												<input name="address" type="text" placeholder="Enter Your Address" required>
 											</div>	
 										</div>
 										<div class="col-lg-4 col-12">
 											<div class="form-group">
 												<label>Your City<span>*</span></label>
-												<input name="city" type="text" placeholder="Enter Your City">
+												<input name="city" type="text" placeholder="Enter Your City" required>
 											</div>	
 										</div>
 										<div class="col-lg-4 col-12">
 											<div class="form-group message">
 												<label>Your Profile Image<span>*</span></label>
-												<input name="profile_image" type="file" placeholder="Upload Your Profile Image">
+												<input name="profile_image" type="file" placeholder="Upload Your Profile Image" required>
 											</div>
 										</div>
 										<div class="col-lg-4 col-12">
 											<div class="form-group message">
 												<label>Your Cover Photo<span>*</span></label>
-												<input name="cover_photo" type="file" placeholder="Upload Your Cover Photo">
+												<input name="cover_photo" type="file" placeholder="Upload Your Cover Photo" required>
 											</div>
 										</div>
 									</div>
@@ -146,14 +159,19 @@
 										</div>
 										<div class="col-lg-4 col-12">
 											<div class="form-group">
-												<label>Your Account Type<span>*</span></label>
-												<input name="account_type" type="text" placeholder="Enter Your Account Type">
+												<label>Your Account Type<span>*</span></label><br>
+												<select name="account_type">
+													<option value="">Select Account type</option>
+													<option value="jazzcash">Jazz Cash</option>
+													<option value="easypassa">Easypassa</option>
+													<option value="bank_account">Bank Account</option>
+												</select>
 											</div>
 										</div>
 										<div class="col-lg-4 col-12">
 											<div class="form-group">
 												<label>Your Bank Name<span>*</span></label>
-												<input name="bank_name" type="email" placeholder="Enter Your Bank Name">
+												<input name="bank_name" type="text" placeholder="Enter Your Bank Name">
 											</div>	
 										</div>
 										<div class="col-lg-4 col-12">
