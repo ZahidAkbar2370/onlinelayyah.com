@@ -21,6 +21,7 @@ class CreateCartsTable extends Migration
             $table->string('price');
             $table->string('quantity');
             $table->string('discount')->nullable();
+            $table->string('total_price')->nullable();
             $table->timestamps();
         });
     }

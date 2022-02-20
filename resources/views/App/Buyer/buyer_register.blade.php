@@ -103,7 +103,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">City</label>
-                                            <input id="city" class="form-control form-control-lg @error('city') is-invalid @enderror"  type="number" name="city" placeholder="Enter Your City Name"  value="{{ old('city') }}" required  autocomplete="city" autofocus/>
+                                            <input id="city" class="form-control form-control-lg @error('city') is-invalid @enderror"  type="text" name="city" placeholder="Enter Your City Name"  value="{{ old('city') }}" required  autocomplete="city" autofocus/>
 
                                             @error('city')
                                                 <span class="invalid-feedback" role="alert">

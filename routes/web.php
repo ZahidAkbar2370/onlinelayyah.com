@@ -47,10 +47,11 @@ Route::post("save-buyer-profile","Buyer\BuyerController@register");
 Route::get("buyer-profile","Buyer\BuyerController@profile");
 
 
-Route::get("/cart",function(){
-	return view("App.Buyer.cart");
-});
-
+// Route::get("/cart",function(){
+// 	return view("App.Buyer.cart");
+// });
+Route::get("cart","Buyer\CartController@create");
+Route::get("delete-cart/{id}","Buyer\CartController@deleteCart");
 Route::get("/check-out",function(){
 	return view("App.Buyer.checkout");
 });
@@ -185,6 +186,10 @@ Route::get("/check-out",function(){
 		Route::get("seller-orders","Seller\OrderController@index");
 		Route::get("seller-order-history","Seller\OrderController@orderHistory");
 		Route::get("seller-delete-order/{id}","Seller\OrderController@deleteOrder");
+		Route::get("seller-confirm-order/{id}","Seller\OrderController@confirmOrder");
+		Route::get("seller-deliver-order/{id}","Seller\OrderController@deliverOrder");
+		Route::get("seller-cashed-order/{id}","Seller\OrderController@cashedOrder");
+		Route::get("seller-view-order/{id}","Seller\OrderController@viewOrder");
 
 	});
 

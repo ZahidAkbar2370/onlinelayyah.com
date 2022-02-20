@@ -165,7 +165,7 @@
 
             <div class="single-product">
               <div class="product-img">
-                <a href="{{url('shop-profile',$shop->id)}}">
+                <a href="{{url('shop-profile',$shop->user_id)}}">
                   <img class="default-img" src="app/images/shopTumbnail/{{$shop->profile_image}}" alt="#">
                   <img class="hover-img" src="app/images/shopCover/{{$shop->cover_photo}}" alt="#">
                   <span class="out-of-stock">{{$shop->categorey_id}}</span>
@@ -174,7 +174,7 @@
 
 
               <div class="product-content">
-                <h3><a href="shop-profile">{{$shop->shop_name}}</a></h3>
+                <h3><a href="shop-profile/{{$shop->user_id}}">{{$shop->shop_name}}</a></h3>
                 <div class="product-price">
                   <p>{{$shop->address}}</p>
                 </div>

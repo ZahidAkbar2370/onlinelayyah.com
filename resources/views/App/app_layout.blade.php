@@ -141,7 +141,7 @@
               <!-- <div class="sinlge-bar">
                 <a href="#" class="single-icon"><i class="ti-power-off"></i></a>
               </div> -->
-              @if(!empty(Auth::user()))
+              @if(!empty(Auth::user()) && Auth::user()->status == "buyer")
               <div class="sinlge-bar">
                 <a href="{{url('buyer-profile')}}" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
               </div>

@@ -20,8 +20,8 @@ class BuyerController extends Controller
 
     public function register(Request $request)
     {
-    	return $request->validate([
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+    	$request->validate([
+            'email' => ['required', 'string', 'max:255', 'unique:users'],
         ]);
 
     	$insert_user = User::create([
@@ -38,7 +38,7 @@ class BuyerController extends Controller
 	    	"mobile_no" => $request->mobile_no,
 	    	"city" => $request->city,
 	    	"parmanent_address" => $request->address,
-	    	"any_main_point" => $request->any_main_po,
+	    	"any_main_point" => $request->any_main_point,
 	    	"buyer_image" => "buyer_image.png",
         ]);
 
