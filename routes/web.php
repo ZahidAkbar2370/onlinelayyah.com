@@ -66,6 +66,8 @@ Route::get("/check-out",function(){
 
 	Route::middleware([CheckPublicationStatus::class])->group(function(){
 
+/////////////////////// Admin Routes ///////////////////////
+
 	Route::middleware([CheckStatusAdmin::class])->group(function(){
 
 		// Route::get("welcome",function(){
@@ -85,6 +87,10 @@ Route::get("/check-out",function(){
 		});
 
 	});
+
+
+// //////////////////////// Seller Routes /////////////////
+
 
 	Route::middleware([CheckStatusSeller::class])->group(function(){
 
@@ -181,6 +187,9 @@ Route::get("/check-out",function(){
 		Route::get("seller-delete-order/{id}","Seller\OrderController@deleteOrder");
 
 	});
+
+
+// //////////////  Buyer Routes ////////////
 
 	Route::middleware([CheckStatusBuyer::class])->group(function(){
 
