@@ -32,15 +32,7 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-        	"name" => "Jakhar Jakhar",
-        	"email" => "buyer@gmail.com",
-        	"password" => Hash::make("buyer123"),
-        	"status" => "buyer",
-        	"publication_status" => "1",
-        ]);
-
-        User::create([
-            "name" => "Test",
+            "name" => "Janu Jakhar",
             "email" => "seller1@gmail.com",
             "password" => Hash::make("seller123"),
             "status" => "seller",
@@ -48,11 +40,27 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            "name" => "Janu Shop",
+            "name" => "Janu Jakhar",
             "email" => "seller2@gmail.com",
             "password" => Hash::make("seller123"),
             "status" => "seller",
             "publication_status" => "1",
+        ]);
+
+        User::create([
+            "name" => "Janu Jakhar",
+            "email" => "seller3@gmail.com",
+            "password" => Hash::make("seller123"),
+            "status" => "seller",
+            "publication_status" => "1",
+        ]);
+
+        User::create([
+        	"name" => "Jakhar Jakhar",
+        	"email" => "buyer@gmail.com",
+        	"password" => Hash::make("buyer123"),
+        	"status" => "buyer",
+        	"publication_status" => "1",
         ]);
     }
 }

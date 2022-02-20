@@ -14,34 +14,35 @@ class CategoreySeeder extends Seeder
      */
     public function run()
     {
-        Categorey::create([
-        	"user_id" => "1",
-        	"categorey_name" => "categorey1",
-        	"publication_status" => "1",
-        ]);
+        // Categorey::create([
+        // 	"user_id" => "1",
+        // 	"categorey_name" => "categorey1",
+        // 	"publication_status" => "1",
+        // ]);
 
-        Categorey::create([
-        	"user_id" => "1",
-        	"categorey_name" => "categorey2",
-        	"publication_status" => "0",
-        ]);
+        // Categorey::create([
+        // 	"user_id" => "1",
+        // 	"categorey_name" => "categorey2",
+        // 	"publication_status" => "0",
+        // ]);
 
-        Categorey::create([
-        	"user_id" => "2",
-        	"categorey_name" => "categorey1",
-        	"publication_status" => "0",
-        ]);
+        // Categorey::create([
+        // 	"user_id" => "2",
+        // 	"categorey_name" => "categorey1",
+        // 	"publication_status" => "0",
+        // ]);
 
-        Categorey::create([
-        	"user_id" => "2",
-        	"categorey_name" => "categorey7",
-        	"publication_status" => "0",
-        ]);
+        // Categorey::create([
+        // 	"user_id" => "2",
+        // 	"categorey_name" => "categorey7",
+        // 	"publication_status" => "0",
+        // ]);
 
-        Categorey::create([
-        	"user_id" => "3",
-        	"categorey_name" => "categorey0",
-        	"publication_status" => "1",
-        ]);
+        // Categorey::create([
+        // 	"user_id" => "3",
+        // 	"categorey_name" => "categorey0",
+        // 	"publication_status" => "1",
+        // ]);
+        \App\Models\Categorey::factory(5)->create();
     }	
 }

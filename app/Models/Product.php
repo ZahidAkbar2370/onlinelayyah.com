@@ -32,7 +32,6 @@ class Product extends Model
         'develivery',
         'delivery_charges',
         'publication_status',
-    
     ];
 
     public function categorey()

@@ -14,34 +14,36 @@ class BrandSeeder extends Seeder
      */
     public function run()
     {
-        Brand::create([
-        	"user_id" => "1",
-        	"brand_name" => "local brand",
-        	"publication_status" => "1",
-        ]);
+        // Brand::create([
+        // 	"user_id" => "1",
+        // 	"brand_name" => "local brand",
+        // 	"publication_status" => "1",
+        // ]);
 
-        Brand::create([
-        	"user_id" => "1",
-        	"brand_name" => "imported brand",
-        	"publication_status" => "1",
-        ]);
+        // Brand::create([
+        // 	"user_id" => "1",
+        // 	"brand_name" => "imported brand",
+        // 	"publication_status" => "1",
+        // ]);
 
-        Brand::create([
-        	"user_id" => "2",
-        	"brand_name" => "pakistani",
-        	"publication_status" => "0",
-        ]);
+        // Brand::create([
+        // 	"user_id" => "2",
+        // 	"brand_name" => "pakistani",
+        // 	"publication_status" => "0",
+        // ]);
 
-        Brand::create([
-        	"user_id" => "2",
-        	"brand_name" => "indian",
-        	"publication_status" => "1",
-        ]);
+        // Brand::create([
+        // 	"user_id" => "2",
+        // 	"brand_name" => "indian",
+        // 	"publication_status" => "1",
+        // ]);
 
-        Brand::create([
-        	"user_id" => "1",
-        	"brand_name" => "indian",
-        	"publication_status" => "0",
-        ]);
+        // Brand::create([
+        // 	"user_id" => "1",
+        // 	"brand_name" => "indian",
+        // 	"publication_status" => "0",
+        // ]);
+
+        \App\Models\Brand::factory(5)->create();
     }
 }
