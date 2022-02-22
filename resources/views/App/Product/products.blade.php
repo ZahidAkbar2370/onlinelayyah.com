@@ -64,14 +64,18 @@
 									<span>Rs {{$product->sale_price - $product->discount}}</span>
 								</div>
 							</div>
-                            
-                        </div>
+               </div>
                       </div>
                       @endforeach
                       @endif
+                  
+             
                     </div>
-                  </div>
+                    </div>
                 </div>
+                
+                {{ $all_products->links() }}
+
                 <!--/ End Single Tab -->
 
               

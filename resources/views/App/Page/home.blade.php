@@ -133,6 +133,8 @@
                       @endif
                     </div>
                   </div>
+                  {{ $all_products->links() }}
+
                 </div>
                 <!--/ End Single Tab -->
                 <!--/ End Single Tab -->

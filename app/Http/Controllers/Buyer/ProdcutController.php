@@ -17,7 +17,6 @@ class ProdcutController extends Controller
         ->select(
         	"brands.brand_name",
         	"categories.categorey_name",
-
         	"products.id as productID",
         	"products.product_name",
         	"products.product_image_1",
@@ -27,7 +26,7 @@ class ProdcutController extends Controller
         ->where("products.publication_status","=", "1")
         ->where("users.publication_status","=", "1")
         ->orderBy('products.id', 'desc')
-        ->get();
+        ->paginate(2);
    
         
     	return view("App.Product.products")

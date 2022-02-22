@@ -2,6 +2,7 @@
 namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Carbon;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +20,8 @@ return $this->format('d-M-Y');
 Carbon::macro('toFormattedTime',function(){
 return $this->format('H:i A');
 });    
+
+Paginator::useBootstrap();
 
 }
 }

@@ -25,7 +25,7 @@ class HomeController extends Controller
         )
         ->where("products.publication_status","=", "1")
         ->orderBy('products.id', 'desc')
-        ->get();
+        ->paginate();
 
         $all_shops = DB::table('users')
         ->join('seller_business_profiles', 'seller_business_profiles.user_id', '=', 'users.id')
