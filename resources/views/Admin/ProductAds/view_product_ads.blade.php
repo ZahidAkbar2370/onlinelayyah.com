@@ -16,19 +16,14 @@ text-align:center;
 </ol>
 </div><!--/.row-->
 
-
 <div class="row">
-
 <div class="col-lg-12">			
-
 <div class="panel panel-default">
 <div class="panel-heading">View Advertisement</div>
-
 <div class="panel-body">
 <p style="font-size:16px; color:red" align="center"></p>
 <div class="col-md-12" style="margin-bottom:10px;">
-<a href="{{route('admin-advertisement-create')}}" class="btn btn-primary pull-right mb-5">New Product Ads</a>
-
+<a href="{{route('admin-productads-create')}}" class="btn btn-primary pull-right mb-5">New Product Ads</a>
 </div>
 <div class="col-md-12">
 <div class="table-responsive">
@@ -46,8 +41,8 @@ text-align:center;
 </tr>
 </thead>
 <tbody>
-@if($advertisements)
-@foreach($advertisements as $index=> $ads)
+@if($productads)
+@foreach($productads as $index=> $ads)
 <tr>
 <td>{{$index+1}}</td>
 <td>{{$ads->product->product_name}}</td>
@@ -56,12 +51,12 @@ text-align:center;
 <td>{{$ads->status}}</td>
 <td>{{$ads->label}}</td>
 <td>
-<a href="{{route('admin-advertisement-edit',$ads->id)}}">
+<a href="{{route('admin-productads-edit',$ads->id)}}">
 <span class="fa fa-edit"></span>   
 </a>
 </td>
 <td>
-<a href="{{route('admin-advertisement-delete',$ads->id)}}">
+<a href="{{route('admin-productads-delete',$ads->id)}}">
 <span class="fa fa-trash"></span>   
 </a>
 </td>
@@ -86,13 +81,13 @@ $('#dataTable').DataTable();
 });  
 </script>
 <!-- Sweat alert if advertisement is added-->
-@if($message=Session::get('advertisementadded'))
+@if($message=Session::get('productadsadded'))
 <script>
 Swal.fire({
 position: 'top-center',
 icon: 'success',
 iconColor: 'green',
-title: 'Your Advertisement Is Successfully Added',
+title: '{{ $message }}',
 timerProgressBar: true,
 showConfirmButton: false,
 timer: 2000
@@ -100,13 +95,13 @@ timer: 2000
 </script>
 @endif
 <!-- Sweat alert if advertisement is deleted -->
-@if($message=Session::get('advertisementdeleted'))
+@if($message=Session::get('productadsdeleted'))
 <script>
 Swal.fire({
 position: 'top-center',
 icon: 'success',
 iconColor: 'red',
-title: 'Your Advertisement Is Successfully Deleted',
+title: '{{ $message }}',
 timerProgressBar: true,
 showConfirmButton: false,
 timer: 2000
@@ -114,13 +109,13 @@ timer: 2000
 </script>
 @endif
 <!-- Sweat alert if advertisement is updated -->
-@if($message=Session::get('advertisementupdated'))
+@if($message=Session::get('productadsupdated'))
 <script>
 Swal.fire({
 position: 'top-center',
 icon: 'success',
 iconColor: 'orange',
-title: 'Your Advertisement Is Successfully Updated',
+title: '{{ $message }}',
 timerProgressBar: true,
 showConfirmButton: false,
 timer: 2000

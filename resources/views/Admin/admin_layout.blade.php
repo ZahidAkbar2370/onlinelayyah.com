@@ -60,26 +60,63 @@ Admin <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><e
 <li><a class="" href="#">
 <span class="fa fa-arrow-right">&nbsp;</span> View Admins
 </a></li>
-
 </ul>
-
 </li>
 
+        <li class="productads"><a data-toggle="collapse" href="#sub-item-2">
+        <i class="fa fa-passport" aria-hidden="true"></i>&nbsp; Product Ads<span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
+        </a>
+        <ul class="children collapse" id="sub-item-2">
+        <li><a class="" href="{{route('admin-productads-create')}}">
+        <span class="fa fa-arrow-right">&nbsp;</span> Add Advertisement
+        </a></li>
+        <li><a class="" href="{{route('admin-productads-view')}}">
+        <span class="fa fa-arrow-right">&nbsp;</span> View Advertisements
+        </a></li>
+        </ul>
+        </li>
 
-<li class="advertisement"><a data-toggle="collapse" href="#sub-item-2">
-<i class="fa fa-passport" aria-hidden="true"></i>&nbsp; Advertisement<span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
-</a>
-<ul class="children collapse" id="sub-item-2">
-<li><a class="" href="{{route('admin-advertisement-create')}}">
-<span class="fa fa-arrow-right">&nbsp;</span> Add Advertisement
-</a></li>
-<li><a class="" href="{{route('admin-advertisement-view')}}">
-<span class="fa fa-arrow-right">&nbsp;</span> View Advertisements
-</a></li>
+                <li class="shopads"><a data-toggle="collapse" href="#sub-item-3">
+                <i class="fa fa-passport" aria-hidden="true"></i>&nbsp; Shop Ads<span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                </a>
+                <ul class="children collapse" id="sub-item-3">
+                <li><a class="" href="{{route('admin-shopads-create')}}">
+                <span class="fa fa-arrow-right">&nbsp;</span> Add Advertisement
+                </a></li>
+                <li><a class="" href="{{route('admin-shopads-view')}}">
+                <span class="fa fa-arrow-right">&nbsp;</span> View Advertisements
+                </a></li>
+                </ul>
+                </li>
 
-</ul>
+        <li class="seller"><a data-toggle="collapse" href="#sub-item-4">
+        <i class="fa fa-passport" aria-hidden="true"></i>&nbsp; Seller<span data-toggle="collapse" href="#sub-item-3" class="icon pull-right"><em class="fa fa-plus"></em></span>
+        </a>
+        <ul class="children collapse" id="sub-item-4">
+        <li><a class="" href="{{route('admin-seller-view')}}">
+        <span class="fa fa-arrow-right">&nbsp;</span>View Seller
+        </a></li>
+        <li>
+        <a class="" href="{{route('admin-seller-view')}}">
+        <span class="fa fa-arrow-right">&nbsp;</span>Change Status
+        </a>
+        </li>
+        </ul>
+        </li>
 
-</li>
+        <li class="buyer"><a data-toggle="collapse" href="#sub-item-5">
+        <i class="fa fa-passport" aria-hidden="true"></i>&nbsp; Buyer<span data-toggle="collapse" href="#sub-item-3" class="icon pull-right"><em class="fa fa-plus"></em></span>
+        </a>
+        <ul class="children collapse" id="sub-item-5">
+        <li><a class="" href="{{route('admin-buyer-view')}}">
+        <span class="fa fa-arrow-right">&nbsp;</span>View Buyer
+        </a></li>
+        <li><a class="" href="{{route('admin-buyer-view')}}">
+        <span class="fa fa-arrow-right">&nbsp;</span>Change Status
+        </a></li>
+        </ul>
+        </li>
+
 <hr>
 <form action="{{URL::to('logout')}}" method="post">
 @csrf
@@ -87,10 +124,7 @@ Admin <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><e
 </form>
 </ul>
 </div>
-
-
 @yield('content')
-
 <div class="col-sm-12">
 </div>
 <script src="{{asset('admin_backend/js/jquery-1.11.1.min.js')}}"></script>
@@ -109,6 +143,7 @@ Admin <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><e
 <script src="{{asset('admin_backend/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{asset('admin_backend/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
 <script src="{{asset('admin_backend/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+
 @yield('extra-js')
 </body>
 </html>

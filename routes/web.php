@@ -57,13 +57,37 @@ Route::get("/check-out",function(){
 });
 
 
-	// Routes for Advertisements
-	Route::get('admin-view-advertisement','Admin\AdvertisementController@index')->name('admin-advertisement-view');
-	Route::get('admin-create-advertisement','Admin\AdvertisementController@create')->name('admin-advertisement-create');
-	Route::get('admin-add-advertisement','Admin\AdvertisementController@store')->name('admin-advertisement-store');
-	Route::get('admin-delete-advertisement/{ads}','Admin\AdvertisementController@destroy')->name('admin-advertisement-delete');
-	Route::get('admin-edit-advertisement/{ads}','Admin\AdvertisementController@edit')->name('admin-advertisement-edit');
-	Route::get('admin-update-advertisement/{ads}','Admin\AdvertisementController@update')->name('admin-advertisement-update');
+	// Routes of a Admin for Product Advertisements
+	Route::get('admin-view-productads','Admin\ProductAdsController@index')->name('admin-productads-view');
+	Route::get('admin-create-productads','Admin\ProductAdsController@create')->name('admin-productads-create');
+	Route::get('admin-add-productads','Admin\ProductAdsController@store')->name('admin-productads-store');
+	Route::get('admin-delete-productads/{ads}','Admin\ProductAdsController@destroy')->name('admin-productads-delete');
+	Route::get('admin-edit-productads/{ads}','Admin\ProductAdsController@edit')->name('admin-productads-edit');
+	Route::get('admin-update-productads/{ads}','Admin\ProductAdsController@update')->name('admin-productads-update');
+
+	// Routes for Admin to view seller and change their status
+	Route::get('admin-view-seller','Admin\SellerController@index')->name('admin-seller-view');
+	Route::get('admin-delete-seller/{id}','Admin\SellerController@destroy')->name('admin-seller-delete');
+	Route::get('admin-edit-seller/{id}','Admin\SellerController@edit')->name('admin-seller-edit');
+	Route::get('admin-update-seller/{id}','Admin\SellerController@update')->name('admin-seller-update');
+
+	// Routes for Admin to view seller and change their status
+	Route::get('admin-view-buyer','Admin\BuyerController@index')->name('admin-buyer-view');
+	Route::get('admin-delete-buyer/{id}','Admin\BuyerController@destroy')->name('admin-buyer-delete');
+	Route::get('admin-edit-buyer/{id}','Admin\BuyerController@edit')->name('admin-buyer-edit');
+	Route::get('admin-update-buyer/{id}','Admin\BuyerController@update')->name('admin-buyer-update');
+
+	// Routes of Admin for Shop Advertisement
+	Route::get('admin-view-shopads','Admin\ShopAdsController@index')->name('admin-shopads-view');
+	Route::get('admin-create-shopads','Admin\ShopAdsController@create')->name('admin-shopads-create');
+	Route::get('admin-add-shopads','Admin\ShopAdsController@store')->name('admin-shopads-store');
+	Route::get('admin-delete-shopads/{ads}','Admin\ShopAdsController@destroy')->name('admin-shopads-delete');
+	Route::get('admin-edit-shopads/{ads}','Admin\ShopAdsController@edit')->name('admin-shopads-edit');
+	Route::get('admin-update-shopads/{ads}','Admin\ShopAdsController@update')->name('admin-shopads-update');
+
+
+
+
 
 	Route::middleware([CheckPublicationStatus::class])->group(function(){
 

@@ -2,7 +2,7 @@
 namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
-class ValidateAdvertisement extends FormRequest
+class ValidateProductAds extends FormRequest
 {
 public function authorize()
 {
